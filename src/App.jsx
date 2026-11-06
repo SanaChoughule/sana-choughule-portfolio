@@ -7,37 +7,46 @@ import {
 
 const projects = [
   {
-    number: '01', type: 'FLAGSHIP CASE STUDY', name: 'Stay Context',
+    number: '01', type: 'FEATURED PRODUCT CASE STUDY', name: 'Stay Context',
     subtitle: 'Helping travellers understand a stay in the context of their trip.',
-    description: 'An independent product concept exploring how accommodation discovery could become more contextual through traveller-selected places, factual travel information and privacy-aware location experiences.',
-    tags: ['Product strategy', 'Discovery', 'UX flows', 'Prototype'],
-    status: 'Interactive prototype',
+    description: 'An independent accommodation-discovery concept shaped around traveller-selected arrival points and Trip Places. The work includes product discovery, user journeys, PRD, prioritised Jira stories, UX flows and an interactive Goa prototype. Distances and travel times in the demo are illustrative, not live routing data.',
+    tags: ['Product strategy', 'PRD & requirements', 'Jira backlog', 'UX & prototype'],
+    status: 'In progress · Interactive prototype',
     links: [
-      { label: 'Explore prototype', url: 'https://ai.studio/apps/4a864329-8f23-4891-ad45-0ead9c81c78e' },
+      { label: 'Open Goa prototype', url: 'https://ai.studio/apps/4a864329-8f23-4891-ad45-0ead9c81c78e' },
       { label: 'View Figma', url: 'https://www.figma.com/design/KCbPbpvyrDNGCbqHMOkUa8/Stay-Context' }
     ],
     visual: 'stay'
   },
   {
-    number: '02', type: 'LIVE AI EXPERIMENT', name: 'Pulse Daily AI',
-    subtitle: 'An AI-powered daily information experience.',
-    description: 'A live AI Studio project exploring how an AI-led interface can make daily information easier to access and engage with.',
-    tags: ['AI product thinking', 'Prototyping', 'Google AI Studio'],
+    number: '02', type: 'LIVE AI PROJECT', name: 'PulseDaily AI',
+    subtitle: 'An AI-powered daily news experience.',
+    description: 'A deployed AI Studio project exploring how an AI-led experience can help people access and engage with daily news. The live application is available to explore.',
+    tags: ['AI product thinking', 'Prompt & workflow design', 'Prototyping', 'Google AI Studio'],
     status: 'Live application',
-    links: [{ label: 'Open live app', url: 'https://pulsedaily-ai-1922.ai.studio/' }],
+    links: [{ label: 'Explore PulseDaily AI', url: 'https://pulsedaily-ai-1922.ai.studio/' }],
     visual: 'pulse'
   },
   {
-    number: '03', type: 'AI WORKSHOP PROJECT', name: 'News AI Agent',
+    number: '03', type: 'SOCIAL-IMPACT DIGITAL EXPERIENCE', name: 'Kalamitra',
+    subtitle: 'Bringing handmade creations to a wider audience.',
+    description: 'A live digital storefront and storytelling experience for handmade products created through a community workshop. The initiative helps present products online and makes it easier for supporters to discover the work and enquire about orders.',
+    tags: ['Social impact', 'Digital commerce', 'Product presentation', 'Community experience'],
+    status: 'Live website · Independent initiative',
+    links: [{ label: 'Visit Kalamitra', url: 'https://kalaamitra.netlify.app/' }],
+    visual: 'kala'
+  },
+  {
+    number: '04', type: 'AI WORKSHOP PROJECT', name: 'News AI Agent',
     subtitle: 'Exploring AI-assisted news discovery and synthesis.',
-    description: 'An agent concept developed during a Build with AI workshop. The portfolio will be updated with its demo link and exact capabilities when available.',
+    description: 'An agent concept developed during a Build with AI workshop. A separate demo and detailed capability summary can be added when those project details are confirmed.',
     tags: ['AI agents', 'Workflow design', 'Experimentation'],
     status: 'Workshop project',
     links: [],
     visual: 'news'
   },
   {
-    number: '04', type: '0-TO-1 PRODUCT CONCEPT', name: 'PlanIt',
+    number: '05', type: '0-TO-1 PRODUCT CONCEPT', name: 'PlanIt',
     subtitle: 'A quicker way to turn an outing idea into a plan.',
     description: 'A location-aware outing planner concept shaped around time, budget, mood, company and activity preferences, with a focused MVP and third-party booking hand-offs.',
     tags: ['Problem framing', 'Journey mapping', 'MVP definition', 'Figma'],
@@ -46,22 +55,13 @@ const projects = [
     visual: 'plan'
   },
   {
-    number: '05', type: 'AI WORKFLOW PROTOTYPE', name: 'Portfolio Automation Agent',
+    number: '06', type: 'AI WORKFLOW PROTOTYPE', name: 'Portfolio Automation Agent',
     subtitle: 'Reducing repetitive work in a photographer’s portfolio workflow.',
     description: 'A prototype workflow that takes social video links or media uploads, organises content into photographer-defined categories, generates metadata and updates portfolio grids while keeping creative control with the user.',
     tags: ['Workflow automation', 'AI-assisted metadata', 'Product prototyping'],
     status: 'Prototype concept',
     links: [],
     visual: 'automation'
-  },
-  {
-    number: '06', type: 'SOCIAL-IMPACT INITIATIVE', name: 'Kalamitra',
-    subtitle: 'Bringing handmade creations to a wider audience.',
-    description: 'A digital commerce and storytelling initiative supporting handmade products created through a community workshop. Focus areas include product presentation, catalogues and a simple online ordering experience.',
-    tags: ['Digital experience', 'Content strategy', 'Commerce concept'],
-    status: 'Initiative',
-    links: [],
-    visual: 'kala'
   },
   {
     number: '07', type: 'HATCHABLE WEB BUILD', name: 'Creator Portfolio Website',
