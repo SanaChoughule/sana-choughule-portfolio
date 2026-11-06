@@ -16,15 +16,26 @@ const projects = [
       { label: 'Open Goa prototype', url: 'https://ai.studio/apps/4a864329-8f23-4891-ad45-0ead9c81c78e' },
       { label: 'View Figma', url: 'https://www.figma.com/design/KCbPbpvyrDNGCbqHMOkUa8/Stay-Context' }
     ],
+    details: [
+      { heading: 'Product opportunity', body: 'Accommodation location is only one part of a trip decision. Travellers also need to understand how a property relates to their own arrival point and the places they have chosen to visit.' },
+      { heading: 'Product approach', body: 'Let travellers select an arrival point and add up to 10 Trip Places, then review neutral distance and travel-time context and compare properties without an overall fit score or algorithmic winner.' },
+      { heading: 'Product work', body: 'Defined the problem, product principles, PRD, user journeys, prioritised Jira epics and stories, acceptance criteria, UX flows and an interactive Goa prototype. The prototype also explores saving and switching between trip drafts.' },
+      { heading: 'Current status & constraints', body: 'Independent product concept with an interactive prototype. Sample distances and travel times are illustrative, not live routing data. Functional QA validation is still pending; no production booking, payment or backend integration is claimed.' }
+    ],
     visual: 'stay'
   },
   {
     number: '02', type: 'LIVE AI PROJECT', name: 'PulseDaily AI',
     subtitle: 'An AI-powered daily news experience.',
     description: 'A deployed AI Studio project exploring how an AI-led experience can help people access and engage with daily news. The live application is available to explore.',
-    tags: ['AI product thinking', 'Prompt & workflow design', 'Prototyping', 'Google AI Studio'],
+    tags: ['AI product thinking', 'Agent experience', 'Prototyping', 'Google AI Studio'],
     status: 'Live application',
     links: [{ label: 'Explore PulseDaily AI', url: 'https://pulsedaily-ai-1922.ai.studio/' }],
+    details: [
+      { heading: 'Concept', body: 'A live AI-powered news experience built to explore how an AI agent can make a daily information workflow more approachable.' },
+      { heading: 'Product focus', body: 'Worked through the idea as an AI-enabled user experience and brought it into a deployed, explorable application using Google AI Studio.' },
+      { heading: 'Current status', body: 'Live project. This portfolio entry focuses on the shipped prototype; product usage, accuracy and engagement metrics are not being claimed here.' }
+    ],
     visual: 'pulse'
   },
   {
@@ -34,6 +45,12 @@ const projects = [
     tags: ['Social impact', 'Digital commerce', 'Product presentation', 'Community experience'],
     status: 'Live website · Independent initiative',
     links: [{ label: 'Visit Kalamitra', url: 'https://kalaamitra.netlify.app/' }],
+    details: [
+      { heading: 'The need', body: 'Handmade products created in a community workshop needed a simple online presence where people could discover the work beyond in-person events and seasonal stalls.' },
+      { heading: 'Experience', body: 'Created a branded digital storefront focused on clear product presentation and helping visitors explore the handmade collection and find an order or enquiry path.' },
+      { heading: 'Product considerations', body: 'The experience is centred on accessibility of product information, straightforward browsing and communicating the people and purpose behind the initiative.' },
+      { heading: 'Current status', body: 'Live independent website. The project is presented as a digital discovery and catalogue experience; no payment or sales-performance claims are made.' }
+    ],
     visual: 'kala'
   },
   {
@@ -126,18 +143,23 @@ function ProjectCard({ project, onOpen }) {
 function ProjectModal({ project, onClose }) {
   if (!project) return null;
   return <div className="modal-backdrop" onClick={onClose}>
-    <div className="project-modal" onClick={e => e.stopPropagation()}>
+    <div className="project-modal" role="dialog" aria-modal="true" aria-labelledby="project-modal-title" onClick={e => e.stopPropagation()}>
       <button className="modal-close" onClick={onClose} aria-label="Close"><X size={19}/></button>
       <div className="section-label"><span/>{project.type}</div>
-      <h2>{project.name}</h2>
+      <h2 id="project-modal-title">{project.name}</h2>
       <p className="modal-lead">{project.subtitle}</p>
       <p>{project.description}</p>
-      <div className="modal-note"><b>Current status</b><span>{project.status}. Additional artefacts and validation details will be added as the case study is developed.</span></div>
+      {project.details?.length > 0 && <div className="modal-details">
+        {project.details.map(item => <section className="modal-detail" key={item.heading}>
+          <h3>{item.heading}</h3>
+          <p>{item.body}</p>
+        </section>)}
+      </div>}
+      <div className="modal-note"><b>Project stage</b><span>{project.status}</span></div>
       {project.links.map(link => <a className="modal-link" key={link.label} href={link.url} target="_blank" rel="noreferrer">{link.label}<ArrowUpRight size={15}/></a>)}
     </div>
   </div>;
 }
-
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selected, setSelected] = useState(null);
