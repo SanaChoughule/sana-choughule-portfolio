@@ -308,7 +308,7 @@ export default function App() {
           })}
         </div>
         <p className="tool-disclaimer">Tools shown reflect experience and working familiarity across projects; depth varies by tool and use case.</p>
-      </section>>
+      </section>
 
       <section className="about-section" id="about">
         <div className="wrap about-grid">
