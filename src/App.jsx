@@ -133,7 +133,7 @@ function ProjectCard({ project, onOpen }) {
         <p className="project-description">{project.description}</p>
         <div className="tag-row">{project.tags.map(t => <span key={t}>{t}</span>)}</div>
         <div className="project-actions">
-          {project.links.length ? project.links.map(link => <a key={link.label} href={link.url} target="_blank" rel="noreferrer">{link.label}<ArrowUpRight size={14}/></a>) : <button onClick={() => onOpen(project)}>View overview <ArrowRight size={14}/></button>}
+          {project.links.map(link => <a key={link.label} href={link.url} target="_blank" rel="noreferrer">{link.label}<ArrowUpRight size={14}/></a>)}<button onClick={() => onOpen(project)}>{project.details?.length ? 'View case study' : 'View overview'} <ArrowRight size={14}/></button>
         </div>
       </div>
     </article>
