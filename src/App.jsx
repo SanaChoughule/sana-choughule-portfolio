@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   ArrowDownRight, ArrowRight, ArrowUpRight, Menu, X, Sparkles,
   Layers3, Workflow, Code2, Compass, Mail, Linkedin, Github,
@@ -34,7 +34,7 @@ const projects = [
     details: [
       { heading: 'Concept', body: 'A live AI-powered news experience built to explore how an AI agent can make a daily information workflow more approachable.' },
       { heading: 'Product focus', body: 'Worked through the idea as an AI-enabled user experience and brought it into a deployed, explorable application using Google AI Studio.' },
-      { heading: 'Current status', body: 'Live project. This portfolio entry focuses on the shipped prototype; product usage, accuracy and engagement metrics are not being claimed here.' }
+      { heading: 'Current status', body: 'Live project. This portfolio entry focuses on the deployed prototype; product usage, accuracy and engagement metrics are not being claimed here.' }
     ],
     visual: 'pulse'
   },
@@ -47,32 +47,28 @@ const projects = [
     links: [{ label: 'Visit Kalamitra', url: 'https://kalaamitra.netlify.app/' }],
     details: [
       { heading: 'The need', body: 'Handmade products created in a community workshop needed a simple online presence where people could discover the work beyond in-person events and seasonal stalls.' },
-      { heading: 'Experience', body: 'Created a branded digital storefront focused on clear product presentation and helping visitors explore the handmade collection and find an order or enquiry path.' },
-      { heading: 'Product considerations', body: 'The experience is centred on accessibility of product information, straightforward browsing and communicating the people and purpose behind the initiative.' },
+      { heading: 'Experience', body: 'Created a branded digital storefront and storytelling experience focused on clear product presentation and helping visitors explore the handmade collection and find an order or enquiry path.' },
       { heading: 'Current status', body: 'Live independent website. The project is presented as a digital discovery and catalogue experience; no payment or sales-performance claims are made.' }
     ],
     visual: 'kala'
   },
   {
-    number: '04', type: 'AI WORKSHOP PROJECT', name: 'News AI Agent',
-    subtitle: 'Exploring AI-assisted news discovery and synthesis.',
-    description: 'An agent concept developed during a Build with AI workshop. A separate demo and detailed capability summary can be added when those project details are confirmed.',
-    tags: ['AI agents', 'Workflow design', 'Experimentation'],
-    status: 'Workshop project',
+    number: '04', type: '0-TO-1 PRODUCT CONCEPT', name: 'Quick Planner',
+    subtitle: 'Turn an outing idea into a plan that fits your day.',
+    description: 'A location-aware outing-planning concept that helps people explore plans around where they are, how much time they have, their budget, mood, company and preferences.',
+    tags: ['Problem framing', 'Personalised planning', 'MVP definition', 'User journeys'],
+    status: 'Product concept · MVP planning',
     links: [],
-    visual: 'news'
-  },
-  {
-    number: '05', type: '0-TO-1 PRODUCT CONCEPT', name: 'PlanIt',
-    subtitle: 'A quicker way to turn an outing idea into a plan.',
-    description: 'A location-aware outing planner concept shaped around time, budget, mood, company and activity preferences, with a focused MVP and third-party booking hand-offs.',
-    tags: ['Problem framing', 'Journey mapping', 'MVP definition', 'Figma'],
-    status: 'Product concept',
-    links: [],
+    details: [
+      { heading: 'The problem', body: 'Planning an outing can mean jumping between maps, food, activity and event platforms before a group can agree on a plan. Quick Planner explores bringing those early decisions into one guided flow.' },
+      { heading: 'The experience', body: 'People can use GPS or enter a location manually, then shape suggestions around available time, budget, mood, who they are with and their interests.' },
+      { heading: 'MVP boundaries', body: 'The concept focuses on curated planning and discovery, with hand-offs to services such as BookMyShow and Zomato for the next step. The MVP is designed without in-app payments or persistent personal-data storage.' },
+      { heading: 'Product and technology planning', body: 'The planning work considered a React web-based admin experience, Java 17 with Spring Boot REST APIs and a lightweight session-based approach. These are proposed MVP architecture choices, not a claim of a completed production build.' }
+    ],
     visual: 'plan'
   },
   {
-    number: '06', type: 'AI WORKFLOW PROTOTYPE', name: 'Portfolio Automation Agent',
+    number: '05', type: 'AI WORKFLOW PROTOTYPE', name: 'Portfolio Automation Agent',
     subtitle: 'Reducing repetitive work in a photographer’s portfolio workflow.',
     description: 'A prototype workflow that takes social video links or media uploads, organises content into photographer-defined categories, generates metadata and updates portfolio grids while keeping creative control with the user.',
     tags: ['Workflow automation', 'AI-assisted metadata', 'Product prototyping'],
@@ -81,7 +77,7 @@ const projects = [
     visual: 'automation'
   },
   {
-    number: '07', type: 'HATCHABLE WEB BUILD', name: 'Creator Portfolio Website',
+    number: '06', type: 'HATCHABLE WEB BUILD', name: 'Creator Portfolio Website',
     subtitle: 'A digital home for an automotive creator’s work.',
     description: 'Built a responsive creator portfolio for a family member using Hatchable, bringing together featured reels, audience highlights, an about story, creative process and collaboration contact paths.',
     tags: ['Hatchable', 'Responsive web experience', 'Content presentation'],
@@ -163,6 +159,40 @@ function ProjectModal({ project, onClose }) {
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selected, setSelected] = useState(null);
+  const [activeToolIndex, setActiveToolIndex] = useState(0);
+  const [toolsPaused, setToolsPaused] = useState(false);
+
+  useEffect(() => {
+    if (toolsPaused) return undefined;
+    const timer = window.setInterval(() => {
+      setActiveToolIndex(index => (index + 1) % toolGroups.length);
+    }, 4200);
+    return () => window.clearInterval(timer);
+  }, [toolsPaused]);
+
+  useEffect(() => {
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return undefined;
+    if (!('IntersectionObserver' in window)) return undefined;
+    const selectors = [
+      '.intro-grid > *', '.section-heading', '.project-card',
+      '.timeline-item', '.toolkit-carousel', '.toolkit-disclaimer',
+      '.about-mark', '.about-copy', '.contact-inner > *'
+    ];
+    const elements = document.querySelectorAll(selectors.join(','));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    elements.forEach(element => {
+      element.classList.add('scroll-reveal');
+      observer.observe(element);
+    });
+    return () => observer.disconnect();
+  }, []);
   const closeMenu = () => setMenuOpen(false);
   const nav = [['Work','#work'],['Journey','#journey'],['Toolkit','#toolkit'],['About','#about']];
   return <>
@@ -236,20 +266,49 @@ export default function App() {
       <section className="section wrap" id="toolkit">
         <div className="section-heading toolkit-heading">
           <div><SectionLabel>MY TOOLKIT</SectionLabel><h2>Fluent across<br/><em>the product stack.</em></h2></div>
-          <p>I enjoy working across disciplines — from product discovery and collaboration to API validation, data and AI-assisted prototyping.</p>
+          <p>I move between product discovery, collaboration, technical validation, data and AI-assisted prototyping — choosing the tool that fits the problem.</p>
         </div>
-        <div className="tool-grid">
+        {(() => {
+          const activeGroup = toolGroups[activeToolIndex];
+          const ActiveIcon = activeGroup.icon;
+          return <div className="toolkit-carousel"
+            onMouseEnter={() => setToolsPaused(true)}
+            onMouseLeave={() => setToolsPaused(false)}
+            onFocus={() => setToolsPaused(true)}
+            onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setToolsPaused(false); }}>
+            <div className="toolkit-carousel-top"><span>TOOLS & METHODS</span><span>0{activeToolIndex + 1} / 0{toolGroups.length}</span></div>
+            <div className="toolkit-carousel-content" key={activeGroup.title}>
+              <div className="toolkit-orbit"><ActiveIcon size={36}/><span className="orbit-ring orbit-ring-one"/><span className="orbit-ring orbit-ring-two"/></div>
+              <div className="toolkit-carousel-copy">
+                <div className="toolkit-active-label">CURRENTLY EXPLORING</div>
+                <h3>{activeGroup.title}</h3>
+                <p>Tools and working methods I use across product work and hands-on experiments.</p>
+                <div className="tool-list">{activeGroup.tools.map(tool => <span key={tool}>{tool}</span>)}</div>
+              </div>
+            </div>
+            <div className="toolkit-carousel-bottom">
+              <div className="toolkit-tabs" role="group" aria-label="Select toolkit category">
+                {toolGroups.map((group, index) => <button key={group.title} type="button"
+                  className={index === activeToolIndex ? 'active' : ''}
+                  aria-label={group.title} aria-pressed={index === activeToolIndex}
+                  onClick={() => setActiveToolIndex(index)}><span/></button>)}
+              </div>
+              <span>{toolsPaused ? 'PAUSED · SELECT A CATEGORY' : 'AUTO-ROTATING · HOVER TO PAUSE'}</span>
+            </div>
+          </div>;
+        })()}
+        <div className="tool-grid tool-grid-compact">
           {toolGroups.map(group => {
             const Icon = group.icon;
             return <div className="tool-card" key={group.title}>
               <div className="tool-icon"><Icon size={19}/></div>
               <h3>{group.title}</h3>
-              <div className="tool-list">{group.tools.map(t => <span key={t}>{t}</span>)}</div>
+              <div className="tool-list">{group.tools.map(tool => <span key={tool}>{tool}</span>)}</div>
             </div>;
           })}
         </div>
         <p className="tool-disclaimer">Tools shown reflect experience and working familiarity across projects; depth varies by tool and use case.</p>
-      </section>
+      </section>>
 
       <section className="about-section" id="about">
         <div className="wrap about-grid">
