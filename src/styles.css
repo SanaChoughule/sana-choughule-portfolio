@@ -471,3 +471,35 @@ body::after{
     object-position:center 50%;
   }
 }
+
+
+/* Full-name wordmark replaces the SC monogram */
+.site-header .brand{
+  display:inline-flex;
+  align-items:baseline;
+  white-space:nowrap;
+  flex:0 0 auto;
+  font-size:21px;
+  line-height:1;
+  letter-spacing:-1.15px;
+  font-weight:800;
+}
+.site-header .brand span{margin-left:1px;color:var(--lime)}
+@media(max-width:800px){
+  .site-header .brand{
+    font-size:18px;
+    letter-spacing:-.9px;
+  }
+}
+@media(max-width:460px){
+  .site-header .brand{
+    font-size:16px;
+    letter-spacing:-.75px;
+  }
+}
+@media(max-width:360px){
+  .site-header{gap:8px;padding-left:14px;padding-right:14px}
+  .site-header .brand{font-size:15px;letter-spacing:-.7px}
+  .header-socials{margin-left:auto;gap:3px}
+  .header-socials a{width:27px;height:27px}
+}
