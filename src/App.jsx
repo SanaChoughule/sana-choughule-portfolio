@@ -58,12 +58,12 @@ const projects = [
     visual: 'kala'
   },
   {
-    number: '04', type: 'MOBILE OUTING PLANNER · PRODUCT CONCEPT', name: 'PlanIt — Quick Planner',
+    number: '04', type: 'DATE & OUTING PLANNER · PRODUCT CONCEPT', name: 'PlanIt — Outing Planner',
     subtitle: 'Turn a date or outing idea into a personalised, step-by-step plan.',
     description: 'A privacy-first mobile app concept that generates a curated outing plan using real-time context such as location, time, budget, mood, company and activity preferences. It is designed for dates, friends, solo outings and custom plans, with booking and navigation handed off to third-party services.',
     tags: ['Product discovery', 'Personalisation', 'Location-aware planning', 'Privacy-first MVP'],
     status: 'Interactive browser prototype · Independent product concept',
-    links: [{ label: 'Open interactive prototype', url: '/quick-planner.html' }],
+    links: [{ label: 'Open outing planner prototype', url: '/planit-outing.html' }],
     details: [
       { heading: 'The opportunity', body: 'Planning a date or outing often means moving between maps, restaurant discovery, movie listings, activity options, weather and booking platforms before a group can settle on a plan. PlanIt explores bringing the planning decisions together in one simple mobile experience, so people can move from an idea to a practical itinerary with less effort.' },
       { heading: 'Product vision and objective', body: 'Build an Android and iOS app that creates a single curated, step-by-step outing plan based on the person’s current or manually entered location, available time, budget, mood, company and activity preferences. The plan is intended to connect several complementary stops, such as a cafe or restaurant, a movie or activity, and a final dessert, walk, gallery or seaside visit.' },
@@ -91,7 +91,7 @@ const projects = [
     description: 'A photographer-focused product case study exploring how creators can move new work into a structured, up-to-date professional portfolio with less repetitive administration. The work focuses on stakeholder needs, problem framing, product decisions and MVP priorities—not a launched product.',
     tags: ['Stakeholder context', 'Problem discovery', 'Product strategy', 'MVP prioritisation'],
     status: 'Independent case study · Product discovery & PRD',
-    links: [],
+    links: [{ label: 'Open interactive prototype', url: '/portfolio-agent.html' }],
     details: [
       { heading: '01 — Stakeholder context', body: 'The primary stakeholder is an independent photographer or videographer who manages their own professional website alongside a steady stream of new creative work. Their latest projects are often shared on social platforms because publishing there is quick, while the portfolio website—the place prospective clients use to review their work—can become outdated. They need a professional presence that stays current without taking time away from shooting, editing and client work. Secondary stakeholders include creative teams and agencies managing multiple portfolios, and prospective clients who need to browse work clearly and confidently.' },
       { heading: '02 — The problem to solve', body: 'Publishing a new project in one place does not automatically update a creator’s professional portfolio. A creator may still need to locate the original media, upload it to a website CMS, create a thumbnail, write a title and description, add tags, select a category, adjust the grid, check mobile presentation, publish and verify the result. The same administrative sequence repeats for each new project and creates context switching, duplicated effort and inconsistent portfolio freshness.' },
@@ -123,6 +123,28 @@ const projects = [
       { heading: 'Project status', body: 'Live website: siddharth-creator.hatchable.site. The audience figures displayed on the website are presented as creator-supplied highlights; they have not been independently audited as part of this portfolio case study.' }
     ],
     visual: 'creator'
+  },
+  {
+    number: '07', type: 'PRODUCTIVITY · PERSONAL PLANNING', name: 'QuickPlanner',
+    subtitle: 'Plan your day. Protect your focus. Keep momentum.',
+    description: 'A midnight-neon productivity workspace that turns a task list into a realistic day plan. It brings time-blocked scheduling, an Eisenhower priority matrix, focused work sessions, habit tracking and weekly productivity insights into one dashboard.',
+    tags: ['Time blocking', 'Eisenhower matrix', 'Focus sessions', 'Habit tracking', 'Productivity analytics'],
+    status: 'Interactive browser prototype · Productivity workspace',
+    links: [
+      { label: 'Open QuickPlanner prototype', url: '/quick-planner.html' },
+      { label: 'View GitHub repository', url: 'https://github.com/SanaChoughule/quick-planner' }
+    ],
+    details: [
+      { heading: 'Product overview', body: 'QuickPlanner is a personal productivity dashboard for organising tasks, allocating time and maintaining focus. The experience brings daily planning and longer-term productivity habits into one workspace.' },
+      { heading: 'Daily timeline and time blocking', body: 'The Timeline view presents a seven-day date strip and a day schedule spanning the workday. Users can create tasks, assign due dates and times, inspect planned blocks, mark work complete and use Auto-Schedule Gaps to place unscheduled tasks into available time.' },
+      { heading: 'Priority matrix and task management', body: 'The Priority Matrix organises tasks using the Eisenhower model: urgent and important, important but not urgent, urgent but not important, and neither urgent nor important. The repository also provides Kanban and list subviews, with task search and category and priority filters.' },
+      { heading: 'Focus sessions', body: 'Focus Mode includes timed work and rest cycles such as Pomodoro, Deep Flow, Power Hour, Short Rest and Long Rest. Sessions can be associated with a task, and completed focus time contributes to the productivity record.' },
+      { heading: 'Habits and consistency', body: 'The Habits view supports recurring rituals, target days per week, time-of-day preferences, completion check-ins and streak tracking. Users can add habits and mark their weekly progress.' },
+      { heading: 'Velocity and analytics', body: 'The Velocity view summarises task completion, focus time and habit consistency. It includes a seven-day view of focus activity, category-level time allocation, a copyable weekly summary and JSON data export.' },
+      { heading: 'Interaction and persistence', body: 'The repository uses browser local storage for tasks, time blocks, habits and focus sessions. The standalone HTML prototype mirrors the primary screens and sample interactions in a single file; it is a browser preview rather than a hosted account-based sync service.' },
+      { heading: 'Product status and boundaries', body: 'The project is presented as an interactive browser prototype based on the QuickPlanner repository. The preview uses sample productivity data and local browser persistence. It does not claim cross-device synchronisation, a production account system or a deployed backend service.' }
+    ],
+    visual: 'quickplanner'
   }
 ];
 
@@ -157,7 +179,8 @@ function ProjectCard({ project, onOpen }) {
         {project.visual === 'pulse' && <><img className="pulse-cover" src="/images/pulsedaily-dashboard.webp" alt="PulseDaily AI personalised Morning Brief dashboard"/><div className="pulse-cover-label">PULSE // DAILY · THE AI WIRE</div></>}
         {project.visual === 'news' && <><div className="news-card"><b>THE DAILY BRIEF</b><span/><span/><span/><small>AI · SIGNAL · CONTEXT</small></div></>}
         {project.visual === 'plan' && <><div className="plan-circle">PLAN<br/>YOUR<br/>DAY</div><div className="plan-dot p1"/><div className="plan-dot p2"/><div className="plan-dot p3"/></>}
-        {project.visual === 'automation' && <><img className="automation-cover automation-logo-cover" src="/images/kalamitra-logo-thumbnail.webp" alt="KalaMitra bilingual logo thumbnail on a warm neutral background" loading="lazy"/><div className="visual-label automation-visual-label">PORTFOLIOPILOT · PRODUCT CASE STUDY</div></>}
+        {project.visual === 'quickplanner' && <><img className="quickplanner-cover" src="/images/quick-planner-thumbnail.svg" alt="QuickPlanner midnight neon productivity planner logo and project thumbnail" loading="lazy"/><div className="visual-label quickplanner-visual-label">QUICKPLANNER · PRODUCTIVITY WORKSPACE</div></>}
+        {project.visual === 'automation' && <><img className="automation-cover automation-logo-cover" src="/images/portfolio-pilot-thumbnail.svg" alt="PortfolioPilot AI portfolio automation agent thumbnail" loading="lazy"/><div className="visual-label automation-visual-label">PORTFOLIOPILOT · AI PORTFOLIO AGENT</div></>}
         {project.visual === 'kala' && <><img className="kalamitra-cover kalamitra-logo-cover" src="/images/kalamitra-logo-thumbnail.webp" alt="KalaMitra logo in English and Marathi, centred on a warm neutral background" loading="lazy"/><div className="visual-label kala-visual-label">KALAMITRA · HANDMADE WITH HEART</div></>}
         {project.visual === 'creator' && <><img className="creator-cover" src="/images/creator-portfolio-hero.webp" alt="Siddharth's live creator portfolio homepage featuring the Built on Horsepower, Driven by Stories hero and motorcycle rider photograph" loading="lazy"/><div className="visual-label creator-visual-label">LIVE CREATOR WEBSITE · MUMBAI</div></>}
       </div>
