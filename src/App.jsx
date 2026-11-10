@@ -42,6 +42,7 @@ const projects = [
       { heading: 'Current status and validation', body: 'These capabilities are documented in the supplied screenshots and five-page product PDF. The live AI Studio URL is included for exploration, but its interactive behavior could not be independently loaded in this review. We should verify which alert, audio, save, and model-call actions are live before describing them as production-connected features.' }
     ],
     visual: 'pulse'
+  },
   {
     number: '03', type: 'SOCIAL-IMPACT DIGITAL EXPERIENCE', name: 'Kalamitra',
     subtitle: 'Bringing handmade creations to a wider audience.',
