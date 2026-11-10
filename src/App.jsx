@@ -119,12 +119,12 @@ function ProjectCard({ project, onOpen }) {
         <span className="project-type">{project.type}</span>
       </div>
       <div className={`project-art art-${project.visual}`}>
-        {project.visual === 'stay' && <><div className="map-lines" /><div className="map-pin">✳</div><div className="map-label">YOUR TRIP, IN CONTEXT</div></>}
+        {project.visual === 'stay' && <><div className="stay-map-texture"/><div className="stay-screen-frame"><img className="stay-cover" src="/images/stay-context-property.png" alt="Stay Context accommodation property screen from the interactive Figma prototype" loading="lazy"/></div><div className="visual-label stay-visual-label">STAY CONTEXT · GOA UI PROTOTYPE</div></>}
         {project.visual === 'pulse' && <><img className="pulse-cover" src="/images/pulsedaily-dashboard.webp" alt="PulseDaily AI personalised Morning Brief dashboard"/><div className="pulse-cover-label">PULSE // DAILY · THE AI WIRE</div></>}
         {project.visual === 'news' && <><div className="news-card"><b>THE DAILY BRIEF</b><span/><span/><span/><small>AI · SIGNAL · CONTEXT</small></div></>}
         {project.visual === 'plan' && <><div className="plan-circle">PLAN<br/>YOUR<br/>DAY</div><div className="plan-dot p1"/><div className="plan-dot p2"/><div className="plan-dot p3"/></>}
-        {project.visual === 'automation' && <><div className="node n1">INPUT</div><div className="node n2">AI</div><div className="node n3">PUBLISH</div><div className="node-line"/></>}
-        {project.visual === 'kala' && <><div className="kala-sun">✳</div><div className="kala-word">made<br/>with care.</div></>}
+        {project.visual === 'automation' && <><img className="automation-cover" src="/images/portfolio-automation-concept.webp" alt="Illustrative AI-assisted media-to-portfolio workflow concept" loading="lazy"/><div className="visual-label automation-visual-label">CONCEPT STUDY · AI WORKFLOW</div></>}
+        {project.visual === 'kala' && <><img className="kalamitra-cover" src="/images/kalamitra-products.webp" alt="Handmade colourful panati diyas from the KalaMitra collection" loading="lazy"/><div className="visual-label kala-visual-label">KALAMITRA · HANDMADE WITH HEART</div></>}
         {project.visual === 'creator' && <><div className="creator-frame"><span>SID·DDG</span><b>BUILT ON<br/><em>HORSEPOWER.</em></b><small>CREATOR PORTFOLIO / MUMBAI</small></div><div className="creator-wheel"/></>}
       </div>
       <div className="project-content">
