@@ -142,3 +142,30 @@ body{font-size:16px}
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   .scroll-reveal{opacity:1;transform:none}
 }
+
+
+/* PulseDaily AI — authentic product imagery */
+.project-art.art-pulse{background:#101412}
+.pulse-cover{display:block;width:100%;height:100%;object-fit:cover;object-position:center;opacity:.94;transition:transform .65s cubic-bezier(.2,.7,.2,1),opacity .4s}
+.pulse-cover-label{position:absolute;left:14px;bottom:13px;padding:7px 10px;background:rgba(10,12,11,.86);border:1px solid rgba(197,226,122,.36);color:#e9e8df;font:9px "DM Mono",monospace;letter-spacing:.11em;z-index:1}
+.project-card:hover .pulse-cover{transform:scale(1.045);opacity:1}
+
+/* Screenshot gallery inside the PulseDaily AI case study */
+.project-modal{width:min(900px,100%);max-height:min(88vh,960px);overflow-y:auto}
+.pulse-gallery{margin:26px 0 30px;padding:18px;border:1px solid rgba(30,35,29,.14);background:#dedbd0}
+.pulse-gallery-heading{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;color:#4e5942;font:10px "DM Mono",monospace;letter-spacing:.11em}
+.pulse-gallery-heading small{font:10px "DM Sans",sans-serif;letter-spacing:0;color:#777568}
+.pulse-gallery-grid{display:grid;grid-template-columns:1.5fr .7fr;gap:12px;align-items:stretch}
+.pulse-shot{min-width:0;display:flex;flex-direction:column;justify-content:space-between;gap:8px;background:#f4f2eb;padding:9px;border:1px solid #c8c4b7;transition:transform .25s,border-color .25s,box-shadow .25s}
+.pulse-shot:hover{transform:translateY(-4px);border-color:#87976c;box-shadow:0 10px 25px rgba(20,25,18,.12)}
+.pulse-shot img{display:block;width:100%;height:255px;object-fit:contain;background:#101412}
+.pulse-shot-persona img{object-fit:contain;background:#f7f6f2}
+.pulse-shot span{font:9px "DM Mono",monospace;letter-spacing:.08em;color:#57634a;padding:4px 2px 1px}
+.project-modal .modal-details{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:620px){
+  .pulse-gallery{padding:12px;margin:20px 0 24px}
+  .pulse-gallery-heading{align-items:flex-start;flex-direction:column}
+  .pulse-gallery-grid{grid-template-columns:1fr}
+  .pulse-shot img{height:auto;max-height:260px}
+  .project-modal .modal-details{grid-template-columns:1fr}
+}
