@@ -9,18 +9,15 @@ const projects = [
   {
     number: '01', type: 'FEATURED PRODUCT CASE STUDY', name: 'Stay Context',
     subtitle: 'Helping travellers understand a stay in the context of their trip.',
-    description: 'An independent accommodation-discovery concept shaped around traveller-selected arrival points and Trip Places. The work includes product discovery, user journeys, PRD, prioritised Jira stories, UX flows and an interactive Goa prototype. Distances and travel times in the demo are illustrative, not live routing data.',
-    tags: ['Product strategy', 'PRD & requirements', 'Jira backlog', 'UX & prototype'],
-    status: 'In progress · Interactive prototype',
-    links: [
-      { label: 'Open Goa prototype', url: 'https://ai.studio/apps/4a864329-8f23-4891-ad45-0ead9c81c78e' },
-      { label: 'View Figma', url: 'https://www.figma.com/design/KCbPbpvyrDNGCbqHMOkUa8/Stay-Context' }
-    ],
+    description: 'An independent accommodation-discovery concept shaped around traveller-selected arrival points and Trip Places. The case study documents the product opportunity, user journeys, PRD, prioritised Jira stories, UX flows and key product decisions.',
+    tags: ['Product strategy', 'PRD & requirements', 'Jira backlog', 'User journeys'],
+    status: 'Independent case study · Product discovery & PRD',
+    links: [],
     details: [
       { heading: 'Product opportunity', body: 'Accommodation location is only one part of a trip decision. Travellers also need to understand how a property relates to their own arrival point and the places they have chosen to visit.' },
       { heading: 'Product approach', body: 'Let travellers select an arrival point and add up to 10 Trip Places, then review neutral distance and travel-time context and compare properties without an overall fit score or algorithmic winner.' },
-      { heading: 'Product work', body: 'Defined the problem, product principles, PRD, user journeys, prioritised Jira epics and stories, acceptance criteria, UX flows and an interactive Goa prototype. The prototype also explores saving and switching between trip drafts.' },
-      { heading: 'Current status & constraints', body: 'Independent product concept with an interactive prototype. Sample distances and travel times are illustrative, not live routing data. Functional QA validation is still pending; no production booking, payment or backend integration is claimed.' }
+      { heading: 'Product work', body: 'Defined the problem, product principles, PRD, user journeys, prioritised Jira epics and stories, acceptance criteria and UX flows. The case study focuses on the reasoning behind the product decisions and the scope of the proposed experience.' },
+      { heading: 'Current status & constraints', body: 'Independent product discovery case study. The proposed experience and its dependencies are documented here; no launched product, live routing, booking, payment or backend integration is being claimed.' }
     ],
     visual: 'stay'
   },
@@ -58,12 +55,12 @@ const projects = [
     visual: 'kala'
   },
   {
-    number: '04', type: 'DATE & OUTING PLANNER · PRODUCT CONCEPT', name: 'PlanIt — Outing Planner',
-    subtitle: 'Turn a date or outing idea into a personalised, step-by-step plan.',
-    description: 'A privacy-first mobile app concept that generates a curated outing plan using real-time context such as location, time, budget, mood, company and activity preferences. It is designed for dates, friends, solo outings and custom plans, with booking and navigation handed off to third-party services.',
-    tags: ['Product discovery', 'Personalisation', 'Location-aware planning', 'Privacy-first MVP'],
-    status: 'Interactive browser prototype · Independent product concept',
-    links: [{ label: 'Open outing planner prototype', url: '/planit-outing.html' }],
+    number: '04', type: 'UNIFIED PLANNING PRODUCT · CASE STUDY', name: 'PlanIt — Quick Planner',
+    subtitle: 'One planning space for outings, daily schedules and everything you want to make time for.',
+    description: 'A unified planning concept that brings outing planning and everyday productivity into one experience. It combines context-aware outing ideas with task scheduling, prioritisation, focus sessions, habit tracking and weekly insights—helping people organise both where they want to go and how they want to use their time.',
+    tags: ['Product discovery', 'Outing planning', 'Time blocking', 'Priority management', 'Focus & habits'],
+    status: 'Unified product concept · Two interactive flow previews',
+    links: [\n      { label: 'Explore outing planning flow', url: '/planit-outing.html' },\n      { label: 'Explore daily planning flow', url: '/quick-planner.html' },\n      { label: 'View GitHub repository', url: 'https://github.com/SanaChoughule/quick-planner' }\n    ],
     details: [
       { heading: 'The opportunity', body: 'Planning a date or outing often means moving between maps, restaurant discovery, movie listings, activity options, weather and booking platforms before a group can settle on a plan. PlanIt explores bringing the planning decisions together in one simple mobile experience, so people can move from an idea to a practical itinerary with less effort.' },
       { heading: 'Product vision and objective', body: 'Build an Android and iOS app that creates a single curated, step-by-step outing plan based on the person’s current or manually entered location, available time, budget, mood, company and activity preferences. The plan is intended to connect several complementary stops, such as a cafe or restaurant, a movie or activity, and a final dessert, walk, gallery or seaside visit.' },
@@ -81,8 +78,11 @@ const projects = [
       { heading: 'Non-functional requirements', body: 'The stated plan-generation target is under three seconds. The experience should provide smooth mobile interactions, use a modular and maintainable architecture, protect user privacy and be straightforward to extend to additional cities. These are requirements and targets; no measured performance or production outcome is being claimed here.' },
       { heading: 'Dependencies and validation still required', body: 'The intended experience depends on reliable place discovery, distance and travel-time estimates, map directions, current opening hours, weather and third-party redirect links. Provider selection, API coverage, accuracy, rate limits, availability of real-time data and graceful behaviour when a provider is unavailable still need validation. The exact retention behaviour for locally stored favourites and session preferences also needs a final product decision.' },
       { heading: 'Project status', body: 'This case study documents the product vision, user flows, functional scope, privacy boundaries and proposed technology from the planning brief. An interactive browser prototype is available to explore the planning journey and basic itinerary editing. It is a concept preview, not the native Android/iOS app: live place discovery, route estimates, weather, opening hours and booking integrations are not connected, and sample recommendations, costs and timings are illustrative.' }
+      { heading: 'Everyday planning and time blocking', body: 'The daily-planning side adds a seven-day timeline, task capture and time-blocked scheduling. Users can inspect their day, move between dates, mark planned blocks complete and auto-schedule unscheduled tasks into open time.' },
+      { heading: 'Priorities, focus and habits', body: 'The workspace also includes an Eisenhower priority matrix with Kanban and list views, timed focus and rest cycles, and habit check-ins with streak tracking. These tools complement the outing flow by helping users organise commitments and protect time for the plans they make.' },
+      { heading: 'Weekly insights and prototype scope', body: 'A velocity view summarises task completion, focus time and habit consistency, with copyable summaries and JSON export. The two browser previews demonstrate the outing-planning and daily-planning flows as parts of one product concept. They use illustrative/sample data and do not represent a single connected production service.' },
     ],
-    visual: 'plan'
+    visual: 'quickplanner'
   },
   {
     number: '05', type: 'STAKEHOLDER CONTEXT · PRODUCT CASE STUDY',
@@ -124,28 +124,7 @@ const projects = [
     ],
     visual: 'creator'
   },
-  {
-    number: '07', type: 'PRODUCTIVITY · PERSONAL PLANNING', name: 'QuickPlanner',
-    subtitle: 'Plan your day. Protect your focus. Keep momentum.',
-    description: 'A midnight-neon productivity workspace that turns a task list into a realistic day plan. It brings time-blocked scheduling, an Eisenhower priority matrix, focused work sessions, habit tracking and weekly productivity insights into one dashboard.',
-    tags: ['Time blocking', 'Eisenhower matrix', 'Focus sessions', 'Habit tracking', 'Productivity analytics'],
-    status: 'Interactive browser prototype · Productivity workspace',
-    links: [
-      { label: 'Open QuickPlanner prototype', url: '/quick-planner.html' },
-      { label: 'View GitHub repository', url: 'https://github.com/SanaChoughule/quick-planner' }
-    ],
-    details: [
-      { heading: 'Product overview', body: 'QuickPlanner is a personal productivity dashboard for organising tasks, allocating time and maintaining focus. The experience brings daily planning and longer-term productivity habits into one workspace.' },
-      { heading: 'Daily timeline and time blocking', body: 'The Timeline view presents a seven-day date strip and a day schedule spanning the workday. Users can create tasks, assign due dates and times, inspect planned blocks, mark work complete and use Auto-Schedule Gaps to place unscheduled tasks into available time.' },
-      { heading: 'Priority matrix and task management', body: 'The Priority Matrix organises tasks using the Eisenhower model: urgent and important, important but not urgent, urgent but not important, and neither urgent nor important. The repository also provides Kanban and list subviews, with task search and category and priority filters.' },
-      { heading: 'Focus sessions', body: 'Focus Mode includes timed work and rest cycles such as Pomodoro, Deep Flow, Power Hour, Short Rest and Long Rest. Sessions can be associated with a task, and completed focus time contributes to the productivity record.' },
-      { heading: 'Habits and consistency', body: 'The Habits view supports recurring rituals, target days per week, time-of-day preferences, completion check-ins and streak tracking. Users can add habits and mark their weekly progress.' },
-      { heading: 'Velocity and analytics', body: 'The Velocity view summarises task completion, focus time and habit consistency. It includes a seven-day view of focus activity, category-level time allocation, a copyable weekly summary and JSON data export.' },
-      { heading: 'Interaction and persistence', body: 'The repository uses browser local storage for tasks, time blocks, habits and focus sessions. The standalone HTML prototype mirrors the primary screens and sample interactions in a single file; it is a browser preview rather than a hosted account-based sync service.' },
-      { heading: 'Product status and boundaries', body: 'The project is presented as an interactive browser prototype based on the QuickPlanner repository. The preview uses sample productivity data and local browser persistence. It does not claim cross-device synchronisation, a production account system or a deployed backend service.' }
-    ],
-    visual: 'quickplanner'
-  }
+
 ];
 
 const toolGroups = [
@@ -175,7 +154,7 @@ function ProjectCard({ project, onOpen }) {
         <span className="project-type">{project.type}</span>
       </div>
       <div className={`project-art art-${project.visual}`}>
-        {project.visual === 'stay' && <><div className="stay-map-texture"/><div className="stay-screen-frame"><img className="stay-cover" src="/images/stay-context-property.png" alt="Stay Context accommodation property screen from the interactive Figma prototype" loading="lazy"/></div><div className="visual-label stay-visual-label">STAY CONTEXT · GOA UI PROTOTYPE</div></>}
+        {project.visual === 'stay' && <><div className="stay-case-map" aria-hidden="true"><span className="route route-one"/><span className="route route-two"/><span className="map-point point-arrival">A</span><span className="map-point point-stay">S</span><span className="map-point point-place">P</span></div><div className="stay-case-study-mark"><small>PRODUCT CASE STUDY</small><strong>STAY<br/>CONTEXT</strong><span>ARRIVAL · ACCOMMODATION · TRIP PLACES</span></div><div className="visual-label stay-visual-label">STAY CONTEXT · PRODUCT DISCOVERY</div></>}
         {project.visual === 'pulse' && <><img className="pulse-cover" src="/images/pulsedaily-dashboard.webp" alt="PulseDaily AI personalised Morning Brief dashboard"/><div className="pulse-cover-label">PULSE // DAILY · THE AI WIRE</div></>}
         {project.visual === 'news' && <><div className="news-card"><b>THE DAILY BRIEF</b><span/><span/><span/><small>AI · SIGNAL · CONTEXT</small></div></>}
         {project.visual === 'plan' && <><div className="plan-circle">PLAN<br/>YOUR<br/>DAY</div><div className="plan-dot p1"/><div className="plan-dot p2"/><div className="plan-dot p3"/></>}
