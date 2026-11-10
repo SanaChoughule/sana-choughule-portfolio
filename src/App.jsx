@@ -277,7 +277,7 @@ export default function App() {
       <span style={{ transform: `scaleX(${scrollProgress})` }}/>
     </div>
     <header className="site-header">
-      <a className="brand" href="#top" onClick={closeMenu}>SC<span>.</span></a>
+      <a className="brand" href="#top" onClick={closeMenu} aria-label="Sana Choughule — home">Sana Choughule<span>.</span></a>
       <nav className={menuOpen ? 'nav open' : 'nav'}>
         {nav.map(([label, href]) => <a key={label} href={href} onClick={closeMenu}>{label}</a>)}
         <a className="nav-contact" href="#contact" onClick={closeMenu}>Let’s connect <ArrowUpRight size={14}/></a>
