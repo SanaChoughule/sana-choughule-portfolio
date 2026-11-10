@@ -120,7 +120,7 @@ function ProjectCard({ project, onOpen }) {
       </div>
       <div className={`project-art art-${project.visual}`}>
         {project.visual === 'stay' && <><div className="map-lines" /><div className="map-pin">✳</div><div className="map-label">YOUR TRIP, IN CONTEXT</div></>}
-        {project.visual === 'pulse' && <><div className="pulse-orb" /><div className="pulse-bars"><i/><i/><i/><i/><i/></div><div className="art-caption">PULSE / DAILY</div></>}
+        {project.visual === 'pulse' && <><img className="pulse-cover" src="/images/pulsedaily-dashboard.webp" alt="PulseDaily AI personalised Morning Brief dashboard"/><div className="pulse-cover-label">PULSE // DAILY · THE AI WIRE</div></>}
         {project.visual === 'news' && <><div className="news-card"><b>THE DAILY BRIEF</b><span/><span/><span/><small>AI · SIGNAL · CONTEXT</small></div></>}
         {project.visual === 'plan' && <><div className="plan-circle">PLAN<br/>YOUR<br/>DAY</div><div className="plan-dot p1"/><div className="plan-dot p2"/><div className="plan-dot p3"/></>}
         {project.visual === 'automation' && <><div className="node n1">INPUT</div><div className="node n2">AI</div><div className="node n3">PUBLISH</div><div className="node-line"/></>}
@@ -150,6 +150,19 @@ function ProjectModal({ project, onClose }) {
       <h2 id="project-modal-title">{project.name}</h2>
       <p className="modal-lead">{project.subtitle}</p>
       <p>{project.description}</p>
+      {project.name === 'PulseDaily AI' && <section className="pulse-gallery" aria-label="PulseDaily AI product screenshots">
+        <div className="pulse-gallery-heading"><span>SELECTED PRODUCT SCREENS</span><small>Open an image to view it larger</small></div>
+        <div className="pulse-gallery-grid">
+          <a className="pulse-shot pulse-shot-dashboard" href="/images/pulsedaily-dashboard.webp" target="_blank" rel="noreferrer">
+            <img src="/images/pulsedaily-dashboard.webp" alt="PulseDaily AI Morning Brief dashboard showing the personalised feed, featured dispatches and breaking radar" loading="lazy"/>
+            <span>02 / THE MORNING BRIEF</span>
+          </a>
+          <a className="pulse-shot pulse-shot-persona" href="/images/pulsedaily-persona.webp" target="_blank" rel="noreferrer">
+            <img src="/images/pulsedaily-persona.webp" alt="PulseDaily AI onboarding screen for selecting a professional persona" loading="lazy"/>
+            <span>01 / PERSONA ONBOARDING</span>
+          </a>
+        </div>
+      </section>}
       {project.details?.length > 0 && <div className="modal-details">
         {project.details.map(item => <section className="modal-detail" key={item.heading}>
           <h3>{item.heading}</h3>
