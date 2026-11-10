@@ -503,3 +503,11 @@ body::after{
   .header-socials{margin-left:auto;gap:3px}
   .header-socials a{width:27px;height:27px}
 }
+
+
+/* QuickPlanner project thumbnail — sourced from its midnight-neon product identity */
+.project-art.art-quickplanner{background:#07090e;position:relative;overflow:hidden}
+.quickplanner-cover{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .45s}
+.project-card:hover .quickplanner-cover{transform:scale(1.045);filter:brightness(1.08)}
+.quickplanner-visual-label{border-color:rgba(0,240,255,.45);color:#b9faff;background:rgba(4,14,25,.9)}
+@media(max-width:560px){.project-art.art-quickplanner{min-height:190px}}
