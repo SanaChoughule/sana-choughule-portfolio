@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07111f"/><stop offset="1" stop-color="#0d1930"/></linearGradient><linearGradient id="neon" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#47f7ff"/><stop offset="1" stop-color="#2461d5"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#ffffff" stroke-opacity=".045"/></pattern></defs>
+<rect width="1200" height="675" fill="url(#bg)"/><rect width="1200" height="675" fill="url(#grid)"/>
+<circle cx="600" cy="255" r="186" fill="#00f0ff" opacity=".045"/>
+<rect x="520" y="105" width="160" height="160" rx="40" fill="url(#neon)"/>
+<path d="M613 128 560 205h37l-8 66 59-86h-41l6-57Z" fill="#06111a"/>
+<text x="600" y="365" text-anchor="middle" fill="#edfaff" font-family="Arial,sans-serif" font-size="69" font-weight="700" letter-spacing="-3">Quick<tspan fill="#00f0ff">Planner</tspan></text>
+<text x="600" y="421" text-anchor="middle" fill="#83a3bb" font-family="monospace" font-size="18" letter-spacing="7">MIDNIGHT NEON</text>
+<path d="M420 465H780" stroke="#00f0ff" stroke-opacity=".35" stroke-width="2"/>
+<text x="600" y="515" text-anchor="middle" fill="#9eafc6" font-family="Arial,sans-serif" font-size="20">Plan your day. Protect your focus. Keep momentum.</text>
+</svg>
