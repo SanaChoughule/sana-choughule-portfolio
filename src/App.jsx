@@ -26,18 +26,22 @@ const projects = [
   },
   {
     number: '02', type: 'LIVE AI PROJECT', name: 'PulseDaily AI',
-    subtitle: 'An AI-powered daily news experience.',
-    description: 'A deployed AI Studio project exploring how an AI-led experience can help people access and engage with daily news. The live application is available to explore.',
-    tags: ['AI product thinking', 'Agent experience', 'Prototyping', 'Google AI Studio'],
-    status: 'Live application',
-    links: [{ label: 'Explore PulseDaily AI', url: 'https://pulsedaily-ai-1922.ai.studio/' }],
+    subtitle: 'A persona-aware AI news wire for staying current without the noise.',
+    description: 'An AI-powered news experience that organises technology and product stories into a personalised daily brief. Users choose a professional persona, explore topic feeds, review Gemini-generated summaries and role-specific takeaways, save stories, and explore additional alert and audio-briefing experiences.',
+    tags: ['AI product thinking', 'Persona personalisation', 'News discovery', 'Google AI Studio'],
+    status: 'Live application · Feature verification in progress',
+    links: [{ label: 'Explore live application', url: 'https://pulsedaily-ai-1922.ai.studio/' }],
     details: [
-      { heading: 'Concept', body: 'A live AI-powered news experience built to explore how an AI agent can make a daily information workflow more approachable.' },
-      { heading: 'Product focus', body: 'Worked through the idea as an AI-enabled user experience and brought it into a deployed, explorable application using Google AI Studio.' },
-      { heading: 'Current status', body: 'Live project. This portfolio entry focuses on the deployed prototype; product usage, accuracy and engagement metrics are not being claimed here.' }
+      { heading: 'Product concept', body: 'PulseDaily AI explores a low-noise daily intelligence experience: instead of presenting every reader with the same generic feed, it uses a professional persona as a relevance lens for technology and AI news.' },
+      { heading: '1. Persona-led onboarding', body: 'The supplied onboarding screen shows a Gmail account step followed by persona selection: Founder / Executive, Software Engineer, or Product Manager. It also presents optional desktop breaking alerts and a Gemini API key field for live model calls.' },
+      { heading: '2. Personalised discovery', body: 'The dashboard organises content into For You and Following, with topic destinations for Agentic AI, Cloud & Infra, and Product & Strategy. A breaking-scoop banner and the Morning Brief create a clear entry point into the day’s stories.' },
+      { heading: '3. AI-assisted story understanding', body: 'Featured dispatches show source and grounding labels, a three-bullet Gemini executive summary, and a “Why this matters” explanation tailored to the selected persona. Story actions include saving, opening the original source, and asking Gemini to explain.' },
+      { heading: '4. Continuous Wire', body: 'The longer chronological feed presents additional dispatches with source, topic, timing, summaries, persona-specific takeaways, and actions to save, open the full story, or request a Gemini explanation.' },
+      { heading: '5. Alerts, audio and saved stories', body: 'The supplied screens also depict a Verge Wire / Radar area for simulating breaking AI alerts and viewing active radar feeds, a VergeCast 60-second audio briefing with playback-speed choices, and a Saved Scoops queue for bookmarked stories.' },
+      { heading: 'Product experience flow', body: 'Account step → choose a professional persona → scan the Morning Brief → explore topic feeds and the Continuous Wire → ask Gemini for a role-aware explanation or save a story → revisit saved scoops and explore alert or audio-briefing surfaces.' },
+      { heading: 'Current status and validation', body: 'These capabilities are documented in the supplied screenshots and five-page product PDF. The live AI Studio URL is included for exploration, but its interactive behavior could not be independently loaded in this review. We should verify which alert, audio, save, and model-call actions are live before describing them as production-connected features.' }
     ],
     visual: 'pulse'
-  },
   {
     number: '03', type: 'SOCIAL-IMPACT DIGITAL EXPERIENCE', name: 'Kalamitra',
     subtitle: 'Bringing handmade creations to a wider audience.',
