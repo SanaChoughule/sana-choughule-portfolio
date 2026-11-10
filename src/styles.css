@@ -422,3 +422,52 @@ body::after{
   .kalamitra-cover.kalamitra-logo-cover{width:100%;height:100%}
   body::before,body::after{width:280px;height:280px;opacity:.11}
 }
+
+
+/* Creator Portfolio: use the supplied live-site hero screenshot */
+.project-art.art-creator{
+  position:relative;
+  overflow:hidden;
+  background:#080b0c;
+}
+.creator-cover{
+  display:block;
+  position:relative;
+  z-index:1;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 50%;
+  transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .45s;
+}
+.project-card:hover .creator-cover{
+  transform:scale(1.035);
+  filter:brightness(1.06) saturate(1.05);
+}
+.creator-visual-label{
+  z-index:3;
+  background:rgba(6,10,10,.88);
+  border-color:rgba(197,255,62,.42);
+  color:#d6ff55;
+}
+.project-art.art-creator::before{
+  z-index:2;
+  opacity:.16;
+  pointer-events:none;
+}
+.project-art.art-creator::after{
+  z-index:2;
+  opacity:.12;
+  pointer-events:none;
+}
+@media(max-width:800px){
+  .project-art.art-creator{
+    height:auto;
+    aspect-ratio:2.05/1;
+    min-height:0;
+  }
+  .creator-cover{
+    object-fit:cover;
+    object-position:center 50%;
+  }
+}
