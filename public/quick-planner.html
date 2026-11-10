@@ -199,8 +199,9 @@
         renderItinerary();
         $('#plannerContent').style.display='none';
         result.classList.add('visible');
-        $('.step:nth-of-type(2)').classList.add('active');
-        $('.step:nth-of-type(3)').classList.add('active');
+        const steps=$('.step');
+        if(steps[1])steps[1].classList.add('active');
+        if(steps[2])steps[2].classList.add('active');
         result.scrollIntoView({behavior:'smooth',block:'nearest'});
       }
       function partnerLink(stop){
@@ -240,7 +241,7 @@
         if(action==='save'){if(savedStops.has(index)){savedStops.delete(index);}else{savedStops.add(index);}renderItinerary();showToast(savedStops.has(index)?'Saved for this session.':'Removed from saved ideas.');}
       });
       form.addEventListener('submit',event=>{event.preventDefault();buildPlan();});
-      $('#editPlan').addEventListener('click',()=>{result.classList.remove('visible');$('#plannerContent').style.display='block';$('.step:nth-of-type(2)').classList.remove('active');$('.step:nth-of-type(3)').classList.remove('active');$('#planner').scrollIntoView({behavior:'smooth',block:'center'});});
+      $('#editPlan').addEventListener('click',()=>{result.classList.remove('visible');$('#plannerContent').style.display='block';const steps=$('.step');if(steps[1])steps[1].classList.remove('active');if(steps[2])steps[2].classList.remove('active');$('#planner').scrollIntoView({behavior:'smooth',block:'center'});});
       $$('.mood-row .choice').forEach(button=>button.addEventListener('click',()=>{$$('.mood-row .choice').forEach(item=>{item.classList.remove('selected');item.setAttribute('aria-pressed','false');});button.classList.add('selected');button.setAttribute('aria-pressed','true');mood=button.dataset.mood;}));
       $('#budget').addEventListener('input',event=>{$('#budgetValue').textContent=money(event.target.value);});
       $('#useLocation').addEventListener('click',()=>{
