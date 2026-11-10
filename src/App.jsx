@@ -123,8 +123,8 @@ function ProjectCard({ project, onOpen }) {
         {project.visual === 'pulse' && <><img className="pulse-cover" src="/images/pulsedaily-dashboard.webp" alt="PulseDaily AI personalised Morning Brief dashboard"/><div className="pulse-cover-label">PULSE // DAILY · THE AI WIRE</div></>}
         {project.visual === 'news' && <><div className="news-card"><b>THE DAILY BRIEF</b><span/><span/><span/><small>AI · SIGNAL · CONTEXT</small></div></>}
         {project.visual === 'plan' && <><div className="plan-circle">PLAN<br/>YOUR<br/>DAY</div><div className="plan-dot p1"/><div className="plan-dot p2"/><div className="plan-dot p3"/></>}
-        {project.visual === 'automation' && <><img className="automation-cover" src="/images/portfolio-automation-reference.webp" alt="Reference infographic showing AI-based portfolio management advantages: intelligent decisions, automated trading, adaptive portfolios and risk mitigation" loading="lazy"/><div className="visual-label automation-visual-label">CASE STUDY · CONCEPT VISUAL</div></>}
-        {project.visual === 'kala' && <><img className="kalamitra-cover" src="/images/kalamitra-hero.webp" alt="KalaMitra website hero introducing handmade, thoughtful and unique creations" loading="lazy"/><div className="visual-label kala-visual-label">KALAMITRA · HANDMADE WITH HEART</div></>}
+        {project.visual === 'automation' && <><img className="automation-cover" src="/images/portfolio-automation-agent.svg" alt="Illustration of creator photos and video assets flowing through an AI curation layer into an organised portfolio grid" loading="lazy"/><div className="visual-label automation-visual-label">CREATOR WORKFLOW · CONCEPT</div></>}
+        {project.visual === 'kala' && <><img className="kalamitra-cover kalamitra-logo-cover" src="/images/kalamitra-logo-thumbnail.webp" alt="KalaMitra logo in English and Marathi, centred on a warm neutral background" loading="lazy"/><div className="visual-label kala-visual-label">KALAMITRA · HANDMADE WITH HEART</div></>}
         {project.visual === 'creator' && <><div className="creator-frame"><span>SID·DDG</span><b>BUILT ON<br/><em>HORSEPOWER.</em></b><small>CREATOR PORTFOLIO / MUMBAI</small></div><div className="creator-wheel"/></>}
       </div>
       <div className="project-content">
@@ -179,6 +179,32 @@ export default function App() {
   const [selected, setSelected] = useState(null);
   const [activeToolIndex, setActiveToolIndex] = useState(0);
   const [toolsPaused, setToolsPaused] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    let frame = 0;
+    const updateScroll = () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      frame = window.requestAnimationFrame(() => {
+        const root = document.documentElement;
+        const maxScroll = Math.max(1, root.scrollHeight - window.innerHeight);
+        const currentScroll = Math.max(0, window.scrollY || 0);
+        setScrollProgress(Math.min(1, currentScroll / maxScroll));
+        root.style.setProperty('--scroll-parallax-a', `${Math.round(currentScroll * -0.035)}px`);
+        root.style.setProperty('--scroll-parallax-b', `${Math.round(currentScroll * 0.022)}px`);
+      });
+    };
+    updateScroll();
+    window.addEventListener('scroll', updateScroll, { passive: true });
+    window.addEventListener('resize', updateScroll);
+    return () => {
+      window.removeEventListener('scroll', updateScroll);
+      window.removeEventListener('resize', updateScroll);
+      if (frame) window.cancelAnimationFrame(frame);
+      document.documentElement.style.removeProperty('--scroll-parallax-a');
+      document.documentElement.style.removeProperty('--scroll-parallax-b');
+    };
+  }, []);
 
   useEffect(() => {
     if (toolsPaused) return undefined;
@@ -215,6 +241,9 @@ export default function App() {
   const closeMenu = () => setMenuOpen(false);
   const nav = [['Work','#work'],['Journey','#journey'],['Toolkit','#toolkit'],['About','#about']];
   return <>
+    <div className="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow={Math.round(scrollProgress * 100)}>
+      <span style={{ transform: `scaleX(${scrollProgress})` }}/>
+    </div>
     <header className="site-header">
       <a className="brand" href="#top" onClick={closeMenu}>SC<span>.</span></a>
       <nav className={menuOpen ? 'nav open' : 'nav'}>
