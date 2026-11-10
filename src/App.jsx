@@ -73,21 +73,41 @@ const projects = [
     visual: 'plan'
   },
   {
-    number: '05', type: 'AI WORKFLOW PROTOTYPE', name: 'Portfolio Automation Agent',
-    subtitle: 'Reducing repetitive work in a photographer’s portfolio workflow.',
-    description: 'A prototype workflow that takes social video links or media uploads, organises content into photographer-defined categories, generates metadata and updates portfolio grids while keeping creative control with the user.',
-    tags: ['Workflow automation', 'AI-assisted metadata', 'Product prototyping'],
-    status: 'Prototype concept',
+    number: '05', type: 'PHOTOGRAPHER WORKFLOW · CASE STUDY', name: 'Portfolio Automation Agent',
+    subtitle: 'An AI-assisted publishing workflow for photographers who want their website to stay current.',
+    description: 'A product concept for reducing the repetitive work between capturing or posting new photography and maintaining a polished portfolio website. The idea brings Instagram-link ingestion and bulk manual uploads into one workflow, with automatic categorisation and layout plus a manual placement option.',
+    tags: ['AI workflow design', 'Media categorisation', 'Bulk upload experience', 'Creator tools'],
+    status: 'Case study · Partial build · Not launched',
     links: [],
+    details: [
+      { heading: 'The problem', body: 'Photographers capture and publish new work frequently, but keeping a personal website updated can mean repeatedly downloading files, sorting images, choosing categories, resizing or arranging media, and publishing each update. That ongoing maintenance can take time away from photography and client work.' },
+      { heading: 'Product concept', body: 'An AI agent connected to a photographer’s existing portfolio website. The photographer provides new content, the agent helps organise it into relevant website categories, and the website can be refreshed without manually rebuilding each gallery.' },
+      { heading: 'Mode 1 — Add from Instagram', body: 'The intended flow lets the photographer paste a link to an Instagram post or Reel containing their new work. The agent is envisioned to retrieve the media, understand the content and prepare it for the connected website. The exact Instagram access, ownership permissions and retrieval method were not validated in the partial build.' },
+      { heading: 'Mode 2 — Bulk manual upload', body: 'The photographer can select and upload a batch of images or videos directly, with an intended batch size in the range of roughly 50–100 items. The final upload limit remains to be decided. The agent then detects image dimensions and content, groups the media by relevance, and proposes categories and gallery placement.' },
+      { heading: 'Automatic organisation', body: 'The AI-assisted flow is intended to identify the subject and context of each item, then organise it into photographer-defined categories such as portraits, nature, weddings and other portfolio collections. It also considers media dimensions and layout suitability so the gallery can be arranged without repetitive manual sorting.' },
+      { heading: 'Manual creative control', body: 'Automation is optional. For a specific photograph, the photographer can choose its category and manually decide where and how it should appear on the website instead of accepting the automatic arrangement.' },
+      { heading: 'Intended end-to-end journey', body: 'Connect or select the photographer’s website → add an Instagram post/Reel link or upload a batch of media → analyse and classify the content → review or adjust category and placement → publish the organised work to the portfolio website.' },
+      { heading: 'Project status and open questions', body: 'This began as a case study and partial attempt to build the agent, but the project was not completed or launched. The two upload modes and the manual-versus-automatic organisation concept describe the intended product, not verified working functionality. Important areas still to resolve include Instagram permissions and retrieval, the exact batch limit, category confidence, review and undo controls, and how publishing is authorised.' }
+    ],
     visual: 'automation'
   },
   {
-    number: '06', type: 'HATCHABLE WEB BUILD', name: 'Creator Portfolio Website',
-    subtitle: 'A digital home for an automotive creator’s work.',
-    description: 'Built a responsive creator portfolio for a family member using Hatchable, bringing together featured reels, audience highlights, an about story, creative process and collaboration contact paths.',
-    tags: ['Hatchable', 'Responsive web experience', 'Content presentation'],
-    status: 'Live website · Independent build',
-    links: [{ label: 'Visit live website', url: 'https://siddharth-creator.hatchable.site' }],
+    number: '06', type: 'LIVE CREATOR WEBSITE · HATCHABLE BUILD', name: 'Creator Portfolio Website',
+    subtitle: 'A digital home for an automotive engineer, motorcycle enthusiast and content creator.',
+    description: 'Designed and built a live portfolio website for an automotive creator, bringing his motorcycle and automotive video work, audience highlights, personal story, creative process, photography and collaboration information into one focused experience.',
+    tags: ['Hatchable build', 'Creator portfolio', 'Content architecture', 'Responsive website'],
+    status: 'Live website · Delivered independent build',
+    links: [{ label: 'Visit Siddharth’s portfolio', url: 'https://siddharth-creator.hatchable.site' }],
+    details: [
+      { heading: 'The brief', body: 'Create a dedicated online home for an automotive engineer and motorcycle-focused Instagram creator whose work includes automotive reels, rider awareness, motorcycle parts and accessories, restoration stories, product and service features, and visual experiments.' },
+      { heading: 'Positioning and first impression', body: 'The site opens with the positioning “Built on horsepower. Driven by stories.” and introduces the creator through automotive culture, storytelling and Mumbai. The hero leads visitors towards the selected work and Instagram profile.' },
+      { heading: 'Selected work and content discovery', body: 'A featured work grid links directly to seven original Instagram reels, including a high-performing automotive reel, Splendor restoration, BikersDNA service content, a custom workshop feature, a film-inspired visual experiment, an automotive explainer and a creator showreel.' },
+      { heading: 'Creator profile and credibility', body: 'The About section introduces Siddharth as an automobile engineer, motorcycle enthusiast, videographer, editor and scriptwriter. The website also displays profile views, a featured-reel view count, follower count and post count as creator-provided audience highlights.' },
+      { heading: 'Creative process and capabilities', body: 'A four-step approach explains how he finds a real story, writes the hook, shoots with intention and edits for attention. The toolkit section highlights short-form video, videography, editing, scriptwriting, storytelling, camera framing, automotive knowledge, product promotion and Reels strategy.' },
+      { heading: 'Photography and collaboration', body: 'A dedicated photo gallery showcases automotive photography and riding-gear details. The contact section provides paths for content creation, videography, editing, scripting and brand collaborations, alongside Instagram, YouTube and direct contact options.' },
+      { heading: 'My contribution and delivery', body: 'I created the website structure and presentation using Hatchable, bringing the creator’s positioning, selected work, personal story, process, visual assets and contact paths into a single responsive portfolio. This is a delivered, live website build, separate from the unfinished photographer Portfolio Automation Agent concept.' },
+      { heading: 'Project status', body: 'Live website: siddharth-creator.hatchable.site. The audience figures displayed on the website are presented as creator-supplied highlights; they have not been independently audited as part of this portfolio case study.' }
+    ],
     visual: 'creator'
   }
 ];
