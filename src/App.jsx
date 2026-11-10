@@ -123,8 +123,8 @@ function ProjectCard({ project, onOpen }) {
         {project.visual === 'pulse' && <><img className="pulse-cover" src="/images/pulsedaily-dashboard.webp" alt="PulseDaily AI personalised Morning Brief dashboard"/><div className="pulse-cover-label">PULSE // DAILY · THE AI WIRE</div></>}
         {project.visual === 'news' && <><div className="news-card"><b>THE DAILY BRIEF</b><span/><span/><span/><small>AI · SIGNAL · CONTEXT</small></div></>}
         {project.visual === 'plan' && <><div className="plan-circle">PLAN<br/>YOUR<br/>DAY</div><div className="plan-dot p1"/><div className="plan-dot p2"/><div className="plan-dot p3"/></>}
-        {project.visual === 'automation' && <><img className="automation-cover" src="/images/portfolio-automation-concept.webp" alt="Illustrative AI-assisted media-to-portfolio workflow concept" loading="lazy"/><div className="visual-label automation-visual-label">CONCEPT STUDY · AI WORKFLOW</div></>}
-        {project.visual === 'kala' && <><img className="kalamitra-cover" src="/images/kalamitra-products.webp" alt="Handmade colourful panati diyas from the KalaMitra collection" loading="lazy"/><div className="visual-label kala-visual-label">KALAMITRA · HANDMADE WITH HEART</div></>}
+        {project.visual === 'automation' && <><img className="automation-cover" src="/images/portfolio-automation-reference.webp" alt="Reference infographic showing AI-based portfolio management advantages: intelligent decisions, automated trading, adaptive portfolios and risk mitigation" loading="lazy"/><div className="visual-label automation-visual-label">CASE STUDY · CONCEPT VISUAL</div></>}
+        {project.visual === 'kala' && <><img className="kalamitra-cover" src="/images/kalamitra-hero.webp" alt="KalaMitra website hero introducing handmade, thoughtful and unique creations" loading="lazy"/><div className="visual-label kala-visual-label">KALAMITRA · HANDMADE WITH HEART</div></>}
         {project.visual === 'creator' && <><div className="creator-frame"><span>SID·DDG</span><b>BUILT ON<br/><em>HORSEPOWER.</em></b><small>CREATOR PORTFOLIO / MUMBAI</small></div><div className="creator-wheel"/></>}
       </div>
       <div className="project-content">
@@ -205,7 +205,8 @@ export default function App() {
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    elements.forEach(element => {
+    elements.forEach((element, index) => {
+      element.style.setProperty('--reveal-delay', `${(index % 4) * 85}ms`);
       element.classList.add('scroll-reveal');
       observer.observe(element);
     });
@@ -220,6 +221,12 @@ export default function App() {
         {nav.map(([label, href]) => <a key={label} href={href} onClick={closeMenu}>{label}</a>)}
         <a className="nav-contact" href="#contact" onClick={closeMenu}>Let’s connect <ArrowUpRight size={14}/></a>
       </nav>
+      <div className="header-socials" aria-label="Quick contact links">
+        <a href="https://linkedin.com/in/sana-choughule" target="_blank" rel="noreferrer" aria-label="LinkedIn profile" title="LinkedIn"><Linkedin size={16}/></a>
+        <a href="https://github.com/SanaChoughule" target="_blank" rel="noreferrer" aria-label="GitHub profile" title="GitHub"><Github size={16}/></a>
+        <a href="mailto:choughulesana@gmail.com" aria-label="Email Sana" title="Email"><Mail size={16}/></a>
+        <a href="/assets/Sana-Choughule-Resume.pdf" target="_blank" rel="noreferrer" aria-label="Open résumé" title="Résumé"><FileText size={16}/></a>
+      </div>
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">{menuOpen ? <X/> : <Menu/>}</button>
     </header>
 
