@@ -190,3 +190,68 @@ body{font-size:16px}
 .automation-cover{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .45s}
 .project-card:hover .automation-cover{transform:scale(1.045);filter:brightness(1.08)}
 .automation-visual-label{border-color:rgba(197,226,122,.4);color:#d9efa4}
+
+
+/* Persistent quick contact shortcuts in the sticky header */
+.header-socials{display:flex;align-items:center;gap:7px;flex:0 0 auto;margin-left:18px}
+.header-socials a{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(236,235,229,.19);border-radius:50%;color:#d7d6ca;background:rgba(255,255,255,.025);transition:color .22s,border-color .22s,background .22s,transform .22s,box-shadow .22s}
+.header-socials a:hover{color:var(--lime);border-color:rgba(197,226,122,.72);background:rgba(197,226,122,.09);transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.header-socials a:active{transform:translateY(-1px) scale(.96)}
+.site-header{gap:18px}
+.site-header .nav{margin-left:auto}
+@media(max-width:800px){
+  .site-header{gap:12px}
+  .site-header .nav{margin-left:0}
+  .header-socials{margin-left:auto;gap:5px}
+  .header-socials a{width:32px;height:32px}
+  .menu-toggle{margin-left:2px}
+}
+@media(max-width:460px){
+  .header-socials{gap:4px}
+  .header-socials a{width:29px;height:29px}
+  .header-socials a svg{width:14px;height:14px}
+}
+
+/* Kalamitra uses the supplied branded website hero image */
+.project-art.art-kala{background:#f8f4ec;position:relative;overflow:hidden}
+.kalamitra-cover{display:block;width:100%;height:100%;object-fit:cover;object-position:center 44%;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .5s}
+.project-card:hover .kalamitra-cover{transform:scale(1.055);filter:saturate(1.04)}
+.kala-visual-label{background:rgba(99,54,39,.91);border-color:rgba(255,245,232,.4);color:#fff5e8}
+
+/* Portfolio automation reference visual — crisp, enlarged source image */
+.project-art.art-automation{background:#111712;position:relative;overflow:hidden}
+.automation-cover{display:block;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .5s}
+.project-card:hover .automation-cover{transform:scale(1.045);filter:brightness(1.07) contrast(1.02)}
+.automation-visual-label{background:rgba(16,22,17,.9);border-color:rgba(197,226,122,.45);color:#e1f3b6}
+
+/* Extra restrained motion for a more lively, polished portfolio */
+@keyframes softFloat{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(1deg)}}
+@keyframes softPulse{0%,100%{box-shadow:0 0 0 0 rgba(197,226,122,.25)}50%{box-shadow:0 0 0 8px rgba(197,226,122,0)}}
+@keyframes ambientDrift{0%,100%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(10px,-12px,0) scale(1.045)}}
+.hero-stamp{animation:softFloat 6.5s ease-in-out infinite}
+.availability-dot{animation:softPulse 2.8s ease-out infinite}
+.hero-visual::before{content:"";position:absolute;z-index:-1;width:320px;height:320px;right:-70px;top:6%;border-radius:50%;background:radial-gradient(circle,rgba(197,226,122,.11),rgba(197,226,122,0) 68%);filter:blur(5px);animation:ambientDrift 12s ease-in-out infinite}
+.hero-visual{isolation:isolate}
+.scroll-reveal{transition-delay:var(--reveal-delay,0ms)}
+.project-card{transform:translateY(0);transition:border-color .3s,transform .45s cubic-bezier(.2,.7,.2,1),box-shadow .45s}
+.project-card:hover{transform:translateY(-9px);box-shadow:0 24px 52px rgba(0,0,0,.24);border-color:rgba(197,226,122,.66)}
+.project-card .project-number{transition:color .3s,transform .3s}
+.project-card:hover .project-number{color:var(--lime);transform:translateY(-2px)}
+.project-art{overflow:hidden}
+.project-art img{will-change:transform}
+.button-primary,.button-light,.nav-contact{position:relative;overflow:hidden}
+.button-primary::after,.button-light::after,.nav-contact::after{content:"";position:absolute;inset:0;transform:translateX(-120%);background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.13) 50%,transparent 65%);transition:transform .75s ease}
+.button-primary:hover::after,.button-light:hover::after,.nav-contact:hover::after{transform:translateX(120%)}
+.section-heading h2,.journey-heading h2,.about-copy h2{transition:letter-spacing .35s}
+.scroll-reveal.is-visible .section-label{animation:labelSettle .55s ease both}
+@keyframes labelSettle{from{opacity:.5;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+.project-card:nth-child(2n){transition-delay:var(--reveal-delay,0ms),var(--reveal-delay,0ms),var(--reveal-delay,0ms)}
+@media(max-width:800px){
+  .hero-visual::before{width:260px;height:260px;right:-35px}
+  .hero-stamp{animation-duration:7.5s}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-stamp,.availability-dot,.hero-visual::before{animation:none!important}
+  .project-card,.project-card:hover{transform:none}
+  .button-primary::after,.button-light::after,.nav-contact::after{display:none}
+}
