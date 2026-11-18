@@ -288,3 +288,81 @@
 @media (max-width: 760px) {
   .case-study-page .mobile-nav { background: rgba(251,248,246,.98); }
 }
+
+
+/* Selected Figma screens */
+.case-study-page .case-screens { background: #FBF8F6; }
+.screen-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+.screen-card {
+  display: grid;
+  grid-template-columns: minmax(150px, 205px) minmax(0,1fr);
+  align-items: center;
+  gap: 22px;
+  margin: 0;
+  padding: 17px;
+  border: 1px solid rgba(54,39,36,.13);
+  border-radius: 5px;
+  background: #FFFFFF;
+  box-shadow: 0 12px 35px rgba(83,54,47,.045);
+}
+.screen-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(54,39,36,.09);
+  border-radius: 3px;
+  background: #F5EFEC;
+}
+.screen-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.screen-card figcaption { min-width: 0; }
+.screen-card figcaption > span {
+  color: #B85D5C;
+  font: 8px var(--mono);
+  letter-spacing: .12em;
+}
+.screen-card h3 {
+  margin: 13px 0 9px;
+  color: #302725;
+  font: 600 20px/1.2 var(--display);
+  letter-spacing: -.04em;
+}
+.screen-card p {
+  margin: 0;
+  color: #716764;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.screen-disclaimer {
+  margin: 19px 0 0;
+  padding: 14px 17px;
+  border-left: 2px solid #C17A6C;
+  background: #F3E9E6;
+  color: #716764;
+  font-size: 11px;
+  line-height: 1.8;
+}
+@media (max-width: 980px) {
+  .screen-gallery-grid { gap: 13px; }
+  .screen-card { grid-template-columns: minmax(130px,170px) minmax(0,1fr); gap: 16px; padding: 13px; }
+  .screen-card h3 { font-size: 18px; }
+}
+@media (max-width: 760px) {
+  .screen-gallery-grid { grid-template-columns: 1fr; }
+  .screen-card { grid-template-columns: minmax(135px, 190px) minmax(0,1fr); gap: 19px; padding: 15px; }
+}
+@media (max-width: 480px) {
+  .screen-card { grid-template-columns: 1fr; gap: 14px; padding: 14px; }
+  .screen-image-wrap { max-height: none; }
+  .screen-image-wrap img { width: min(100%, 250px); }
+  .screen-card h3 { margin-top: 9px; }
+}
