@@ -26,7 +26,7 @@
 .planit-art-orbit { position:absolute; left:50%; top:48%; transform:translate(-50%,-50%) rotate(-20deg); border:1px solid rgba(190,99,94,.21); border-radius:50%; }
 .orbit-outer { width:82%; height:69%; }
 .orbit-inner { width:58%; height:48%; transform:translate(-50%,-50%) rotate(22deg); border-color:rgba(190,99,94,.14); }
-.planit-art-card { position:absolute; left:50%; top:48%; transform:translate(-50%,-50%) rotate(-3deg); width:min(250px, sixty-percent); width:min(250px,64%); padding:23px 20px 18px; border:1px solid rgba(190,99,94,.27); background:rgba(255,255,255,.94); box-shadow:12px 16px 0 rgba(126,75,68,.08); text-align:center; }
+.planit-art-card { position:absolute; left:50%; top:48%; transform:translate(-50%,-50%) rotate(-3deg); width:min(250px,64%); padding:23px 20px 18px; border:1px solid rgba(190,99,94,.27); background:rgba(255,255,255,.94); box-shadow:12px 16px 0 rgba(126,75,68,.08); text-align:center; }
 .planit-art-card img { display:block; width:100%; max-height:102px; object-fit:contain; }
 .planit-art-card-label { margin-top:13px; color:#927A73; font:8px var(--mono); letter-spacing:.1em; }
 .planit-art-node { position:absolute; z-index:2; min-width:120px; padding:13px 14px; border:1px solid rgba(82,53,48,.15); background:rgba(255,255,255,.95); box-shadow:0 12px 25px rgba(95,58,51,.08); }
@@ -213,4 +213,77 @@
 }
 @media (prefers-reduced-motion: reduce) {
  .planit-page html { scroll-behavior:auto; }
+}
+.planit-api-journey {
+  margin: 19px 0 0;
+  padding: 25px;
+  border: 1px solid rgba(229,138,131,.3);
+  background: rgba(255,255,255,.045);
+}
+.api-journey-heading > span,.api-journey-boundary span {
+  color:#E9A49D;
+  font:8px var(--mono);
+  letter-spacing:.12em;
+}
+.api-journey-heading h3 {
+  margin:11px 0 7px;
+  color:#FFF9F6;
+  font:600 23px/1.2 var(--display);
+  letter-spacing:-.04em;
+}
+.api-journey-heading p {
+  margin:0;
+  color:#CDBBB5;
+  font-size:10px;
+  line-height:1.7;
+}
+.api-journey-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  margin-top:22px;
+}
+.api-journey-grid article {
+  min-height:135px;
+  padding:15px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.045);
+}
+.api-journey-grid article > b {
+  color:#E9A49D;
+  font:8px var(--mono);
+}
+.api-journey-grid h4 {
+  margin:12px 0 7px;
+  color:#FFF9F6;
+  font:600 14px var(--display);
+}
+.api-journey-grid p {
+  margin:0;
+  color:#D0C2BC;
+  font-size:10px;
+  line-height:1.7;
+}
+.api-journey-boundary {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+  margin-top:20px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.14);
+}
+.api-journey-boundary p {
+  margin:8px 0 0;
+  color:#D0C2BC;
+  font-size:10px;
+  line-height:1.75;
+}
+@media (max-width:760px) {
+  .planit-api-journey { padding:19px 15px; }
+  .api-journey-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .api-journey-boundary { grid-template-columns:1fr; gap:13px; }
+}
+@media (max-width:480px) {
+  .api-journey-grid { grid-template-columns:1fr; }
+  .api-journey-grid article { min-height:0; }
 }
