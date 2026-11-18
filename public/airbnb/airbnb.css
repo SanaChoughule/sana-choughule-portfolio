@@ -1042,3 +1042,75 @@ body {
   .planit-home-art { min-height:300px; }
   .planit-home-actions { align-items:flex-start; flex-direction:column; }
 }
+
+
+/* PortfolioPilot third flagship case-study panel */
+.pp-home-panel { margin-top:18px; }
+.pp-home-art {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:radial-gradient(circle at 52% 46%,rgba(217,120,114,.17),transparent 45%),linear-gradient(145deg,#F5E9E5,#FFFDFC 72%);
+}
+.pp-home-art::before {
+  background-image:linear-gradient(rgba(92,62,56,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(92,62,56,.05) 1px,transparent 1px);
+}
+.pp-home-orbit {
+  position:absolute;
+  width:76%;
+  aspect-ratio:1;
+  border:1px solid rgba(190,99,94,.2);
+  border-radius:50%;
+  transform:rotate(-19deg);
+}
+.pp-home-studio-card {
+  position:relative;
+  z-index:2;
+  width:min(305px,78%);
+  background:#FFFEFC;
+  border:1px solid rgba(190,99,94,.25);
+  box-shadow:13px 15px 0 rgba(126,75,68,.08);
+  transform:rotate(2deg);
+}
+.pp-home-studio-top {
+  display:flex;
+  justify-content:space-between;
+  padding:11px 13px;
+  border-bottom:1px solid #F0E6E1;
+  color:#A58D84;
+  font:6px var(--mono);
+  letter-spacing:.08em;
+}
+.pp-home-studio-top i { color:#C9847B; font-style:normal; letter-spacing:2px; }
+.pp-home-studio-body { padding:22px 21px 20px; }
+.pp-home-studio-body>span { color:#B36C65; font:7px var(--mono); letter-spacing:.1em; }
+.pp-home-studio-body>b {
+  display:block;
+  margin:10px 0 19px;
+  color:#483833;
+  font:650 25px/1.05 var(--display);
+  letter-spacing:-.06em;
+}
+.pp-home-studio-flow { display:grid; grid-template-columns:repeat(4,1fr); gap:4px; }
+.pp-home-studio-flow i {
+  padding:7px 3px;
+  border:1px solid #F0E2DE;
+  background:#FBF4F1;
+  color:#A85D58;
+  text-align:center;
+  font:6px var(--mono);
+  font-style:normal;
+}
+.pp-home-art-foot {
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  z-index:2;
+  color:#8D7770;
+  font:7px var(--mono);
+  letter-spacing:.1em;
+}
+@media (max-width:760px) {
+  .pp-home-panel { margin-top:14px; }
+  .pp-home-art { min-height:300px; }
+}
