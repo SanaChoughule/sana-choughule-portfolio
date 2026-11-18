@@ -841,3 +841,26 @@ body {
   .api-flow-step p { font-size: 9px; }
   .signals-list { grid-template-columns: 1fr; }
 }
+
+.api-contract-note {
+  display: grid;
+  grid-template-columns: 155px minmax(0,1fr);
+  gap: 16px;
+  margin: 19px 0 22px;
+  padding: 14px 16px;
+  border-left: 2px solid #A9C8BC;
+  background: rgba(169,200,188,.08);
+}
+.api-contract-note b {
+  color: #B8D9CD;
+  font-size: 10px;
+  font-weight: 700;
+}
+.api-contract-note span {
+  color: #D0C2BC;
+  font-size: 10px;
+  line-height: 1.75;
+}
+@media (max-width: 760px) {
+  .api-contract-note { grid-template-columns: 1fr; gap: 6px; }
+}
