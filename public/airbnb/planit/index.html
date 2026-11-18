@@ -225,6 +225,25 @@
             <div class="arch-arrow">→</div>
             <div class="arch-node"><span>04 · PROVIDERS</span><b>Places · Routes<br />Weather · Hours</b><small>External data dependencies</small></div>
           </div>
+          <div class="planit-api-journey">
+            <div class="api-journey-heading">
+              <span>PROPOSED REQUEST-TO-ITINERARY FLOW</span>
+              <h3>How a planning choice could travel through the product</h3>
+              <p>Conceptual architecture based on the product brief; this is not an implemented API contract.</p>
+            </div>
+            <div class="api-journey-grid">
+              <article><b>01</b><h4>Capture context</h4><p>Location, start time, duration, budget, mood, company and activity preferences.</p></article>
+              <article><b>02</b><h4>Send the request</h4><p>The client submits the selected inputs through a defined REST request.</p></article>
+              <article><b>03</b><h4>Apply planning logic</h4><p>The Java service validates inputs, applies product constraints and coordinates provider calls.</p></article>
+              <article><b>04</b><h4>Retrieve dependencies</h4><p>Place discovery, route estimates, opening hours and weather depend on external data providers.</p></article>
+              <article><b>05</b><h4>Return an itinerary</h4><p>Respond with ordered stops and relevant place, distance, timing and hand-off information for the UI.</p></article>
+              <article><b>06</b><h4>Let the user refine</h4><p>Render an editable plan. Replace or reorder stops and redirect to a partner when ready.</p></article>
+            </div>
+            <div class="api-journey-boundary">
+              <div><span>PRODUCT QUESTIONS</span><p>Which inputs are essential? What makes a useful itinerary? How should users change the plan? What happens when data is incomplete?</p></div>
+              <div><span>ENGINEERING QUESTIONS</span><p>How are requests validated? Which provider owns each data point? What are the latency, rate-limit, privacy and failure-handling constraints?</p></div>
+            </div>
+          </div>
           <div class="planit-architecture-notes">
             <article><span>STATE & PRIVACY</span><p>Session-based or in-memory data is proposed. A permanent user database and persistent personal profiles are outside the stated brief.</p></article>
             <article><span>EXTERNAL HAND-OFF</span><p>Booking and navigation links redirect to third-party providers; payment and booking transactions remain with those providers.</p></article>
