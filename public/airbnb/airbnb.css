@@ -934,3 +934,31 @@ body {
   .certification-strip { align-items: flex-start; flex-wrap: wrap; padding: 17px; }
   .certification-tag { margin-left: 0; }
 }
+
+.certification-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.certification-link:hover {
+  border-color: rgba(197,103,97,.42);
+  box-shadow: 0 12px 32px rgba(83,54,47,.08);
+  transform: translateY(-2px);
+}
+.certification-link:focus-visible {
+  outline: 3px solid #B85D5C;
+  outline-offset: 4px;
+}
+.certification-link-action {
+  margin-left: auto;
+  padding: 9px 11px;
+  border: 1px solid rgba(197,103,97,.25);
+  color: #9A625C;
+  font: 8px var(--mono);
+  letter-spacing: .1em;
+  white-space: nowrap;
+}
+@media (max-width: 760px) {
+  .certification-link-action { margin-left: 0; }
+}
