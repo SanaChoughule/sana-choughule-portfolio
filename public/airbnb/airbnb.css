@@ -693,15 +693,6 @@ body {
   font-size: 11px;
   line-height: 1.8;
 }
-.architecture-note {
-  margin: 21px 0 0;
-  padding: 12px 14px;
-  border-left: 2px solid #E58A83;
-  background: rgba(229,138,131,.07);
-  color: #CDBBB5;
-  font-size: 10px;
-  line-height: 1.75;
-}
 .signals-panel {
   display: grid;
   grid-template-columns: .8fr 1.2fr;
