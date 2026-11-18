@@ -172,3 +172,119 @@
 @media (prefers-reduced-motion: reduce) {
   .case-study-page html { scroll-behavior: auto; }
 }
+
+/* Warm hospitality palette — Stay Context case study */
+.case-study-page .site-header { background: rgba(251,248,246,.92); border-bottom-color: rgba(54,39,36,.10); }
+.case-study-page .wordmark { color: #292423; }
+.case-study-page .desktop-nav a, .case-study-page .header-link { color: #716764; }
+.case-study-page .case-hero h1 { color: #292423; }
+.case-study-page .case-hero h1 em { color: #C56864; }
+.case-study-page .case-hero-lede { color: #332A27; }
+.case-study-page .case-hero-summary { color: #716764; }
+.case-study-page .back-link, .case-study-page .case-back-bottom { color: #81736E; }
+.case-study-page .back-link:hover, .case-study-page .case-back-bottom:hover { color: #B85D5C; }
+.case-study-page .case-tags span { border-color: rgba(54,39,36,.14); color: #8A625D; }
+.case-study-page .case-visual {
+  border-color: rgba(82,53,48,.13);
+  background: radial-gradient(circle at 52% 46%,rgba(217,120,114,.16),transparent 42%),linear-gradient(145deg,#F6E7E3,#FDF8F5 74%);
+}
+.case-study-page .case-map-grid { background-image: linear-gradient(rgba(92,62,56,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(92,62,56,.055) 1px,transparent 1px); }
+.case-study-page .case-visual-top { color: #887670; }
+.case-study-page .case-visual-top span:last-child { color: #C56864; }
+.case-study-page .map-point { border-color: rgba(82,53,48,.15); background: rgba(255,255,255,.94); box-shadow: 0 15px 35px rgba(95,58,51,.09); }
+.case-study-page .map-point span { color: #8D7770; }
+.case-study-page .map-point b { color: #292423; }
+.case-study-page .map-point i { color: #C56864; }
+.case-study-page .case-map-route { background: linear-gradient(90deg,rgba(190,99,94,.12),rgba(190,99,94,.82),rgba(190,99,94,.15)); }
+.case-study-page .case-map-route::after { background: #D97872; box-shadow: 0 0 0 5px rgba(217,120,114,.12); }
+.case-study-page .map-context-note { border-color: rgba(190,99,94,.25); background: rgba(255,255,255,.95); }
+.case-study-page .map-context-note > span { color: #C56864; }
+.case-study-page .map-context-note b { color: #292423; }
+.case-study-page .map-context-note small { color: #8C7771; }
+.case-study-page .case-visual-foot { color: #8C7B75; }
+.case-study-page .case-facts { border-color: rgba(54,39,36,.13); }
+.case-study-page .case-facts > div { border-right-color: rgba(54,39,36,.13); }
+.case-study-page .case-facts span { color: #917D76; }
+.case-study-page .case-facts b { color: #443936; }
+.case-study-page .case-intro-band { background: #F3E9E6; color: #292423; }
+.case-study-page .case-intro-band .section-kicker { color: #806D67; }
+.case-study-page .case-intro-band .section-kicker span { background: #D97872; }
+.case-study-page .case-intro-band h2 { color: #292423; }
+.case-study-page .case-intro-band h2 em { color: #C56864; }
+.case-study-page .case-intro-band p { color: #665C58; }
+.case-study-page .case-section { background: #FBF8F6; }
+.case-study-page .case-section-soft { background: #F3E9E6; }
+.case-study-page .case-section-dark { background: #2D2524; border-color: rgba(54,39,36,.12); }
+.case-study-page .case-section .section-kicker { color: #887B75; }
+.case-study-page .case-section .section-kicker span { background: #D97872; }
+.case-study-page .case-section-heading h2 { color: #292423; }
+.case-study-page .case-section-heading h2 em { color: #C56864; }
+.case-study-page .section-heading-sub { color: #716764; }
+.case-study-page .case-two-column p { color: #716764; }
+.case-study-page .case-two-column p.case-lead, .case-study-page .case-lead { color: #342B29; }
+.case-study-page .friction-list { border-top-color: rgba(54,39,36,.18); }
+.case-study-page .friction-list > div { border-bottom-color: rgba(54,39,36,.15); }
+.case-study-page .friction-list span { color: #C56864; }
+.case-study-page .friction-list p { color: #403633; }
+.case-study-page .insight-panel { border-color: rgba(197,103,97,.24); background: rgba(217,120,114,.07); }
+.case-study-page .insight-label { color: #A96761; }
+.case-study-page .insight-panel p { color: #9F4D50; }
+.case-study-page .discovery-copy > p:not(.case-lead) { color: #716764; }
+.case-study-page .discovery-methods span { border-color: rgba(54,39,36,.14); color: #8A625D; }
+.case-study-page .discovery-insight { border-color: rgba(197,103,97,.23); background: linear-gradient(145deg,rgba(217,120,114,.10),rgba(255,255,255,.7)); }
+.case-study-page .discovery-insight h3 { color: #302725; }
+.case-study-page .discovery-insight p { color: #716764; }
+.case-study-page .opportunity-row { border-top-color: rgba(54,39,36,.17); }
+.case-study-page .opportunity-row > span { color: #A96761; }
+.case-study-page .opportunity-row p { color: #403633; }
+.case-study-page .concept-grid { border-color: rgba(54,39,36,.14); }
+.case-study-page .concept-card { background: rgba(255,255,255,.82); border-right-color: rgba(54,39,36,.13); }
+.case-study-page .concept-number { color: #C56864; }
+.case-study-page .concept-symbol { color: #C56864; border-color: rgba(197,103,97,.25); background: rgba(217,120,114,.08); }
+.case-study-page .concept-card h3 { color: #302725; }
+.case-study-page .concept-card p { color: #716764; }
+.case-study-page .experience-strip { border-color: rgba(54,39,36,.14); background: rgba(255,255,255,.68); }
+.case-study-page .experience-label { color: #927C75; }
+.case-study-page .experience-flow span { color: #403633; }
+.case-study-page .experience-flow i { color: #C56864; }
+.case-study-page .case-section-dark .section-kicker { color: #D3BEB7; }
+.case-study-page .case-section-dark .case-section-heading h2 { color: #FFF9F6; }
+.case-study-page .case-section-dark .case-section-heading h2 em { color: #E58A83; }
+.case-study-page .principle-grid { border-top-color: rgba(255,255,255,.19); }
+.case-study-page .principle-grid article { border-bottom-color: rgba(255,255,255,.16); }
+.case-study-page .principle-index { color: #E58A83; }
+.case-study-page .principle-grid h3 { color: #FFF8F4; }
+.case-study-page .principle-grid p { color: #D1C3BD; }
+.case-study-page .tradeoff-note { border-color: rgba(229,138,131,.28); background: rgba(229,138,131,.07); }
+.case-study-page .tradeoff-note span { color: #E8A29B; }
+.case-study-page .tradeoff-note p { color: #F0E3DE; }
+.case-study-page .ownership-grid { border-color: rgba(54,39,36,.14); background: rgba(54,39,36,.14); }
+.case-study-page .ownership-item { background: #FFFFFF; }
+.case-study-page .ownership-item span { color: #B85D5C; }
+.case-study-page .ownership-item b { color: #403633; }
+.case-study-page .validation-boundary { border-left-color: #C17A6C; background: rgba(193,122,108,.09); }
+.case-study-page .validation-boundary span { color: #A96761; }
+.case-study-page .validation-boundary p { color: #716764; }
+.case-study-page .closing-grid h2 { color: #292423; }
+.case-study-page .closing-grid h2 em { color: #C56864; }
+.case-study-page .closing-copy p { color: #716764; }
+.case-study-page .case-cta { background: #2D2524; color: #F9F4F1; }
+.case-study-page .case-cta .section-kicker { color: #D3BEB7; }
+.case-study-page .case-cta .section-kicker span { background: #E58A83; }
+.case-study-page .case-cta h2 { color: #FFF9F6; }
+.case-study-page .case-cta h2 em { color: #E58A83; }
+.case-study-page .case-cta p { color: #D0C2BC; }
+.case-study-page .case-cta .button-primary { background: #E58A83; color: #2A201E; }
+.case-study-page .case-cta .button-primary:hover { background: #F09B93; }
+.case-study-page .case-cta .button-quiet { border-color: rgba(255,255,255,.27); color: #FFF9F6; background: rgba(255,255,255,.04); }
+.case-study-page .case-cta .button-quiet:hover { border-color: #E58A83; color: #F4B1AA; }
+.case-study-page .case-back-bottom { color: #D1BCB5; }
+.case-study-page .site-footer { background: #211B1A; }
+.case-study-page .site-footer .wordmark { color: #FFF9F6; }
+.case-study-page .footer-links { color: #C4B7B1; }
+.case-study-page .footer-links a:hover { color: #E58A83; }
+.case-study-page .footer-bottom { color: #A99A94; }
+.case-study-page .footer-bottom a { color: #F0D8D2; }
+@media (max-width: 760px) {
+  .case-study-page .mobile-nav { background: rgba(251,248,246,.98); }
+}
