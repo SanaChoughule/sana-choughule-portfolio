@@ -864,3 +864,73 @@ body {
 @media (max-width: 760px) {
   .api-contract-note { grid-template-columns: 1fr; gap: 6px; }
 }
+
+/* Expanded AWS, backend, integrations, data and quality toolkit */
+.product-tech-section .scope-row b { flex: 0 0 auto; }
+.toolkit-grid {
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  align-items: stretch;
+}
+.toolkit-card {
+  display: flex;
+  flex-direction: column;
+}
+.toolkit-card p { min-height: 54px; }
+.tool-pills { margin-top: auto; }
+.certification-strip {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  margin-top: 17px;
+  padding: 20px 23px;
+  border: 1px solid rgba(197,103,97,.2);
+  border-radius: 5px;
+  background: linear-gradient(100deg,#F7E9E5,#FFFFFF);
+}
+.certification-mark {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #2D2524;
+  color: #F0C4BD;
+  font: 800 14px var(--display);
+  letter-spacing: -.04em;
+}
+.certification-strip > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.certification-strip span {
+  color: #A96761;
+  font: 8px var(--mono);
+  letter-spacing: .11em;
+}
+.certification-strip b {
+  color: #302725;
+  font: 700 15px var(--display);
+}
+.certification-strip small {
+  color: #716764;
+  font-size: 10px;
+}
+.certification-tag {
+  margin-left: auto;
+  padding: 8px 10px;
+  border: 1px solid rgba(197,103,97,.22);
+  color: #9A625C;
+  font: 8px var(--mono);
+  letter-spacing: .1em;
+}
+@media (max-width: 900px) {
+  .toolkit-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 760px) {
+  .toolkit-grid { grid-template-columns: 1fr; }
+  .toolkit-card p { min-height: 0; }
+  .certification-strip { align-items: flex-start; flex-wrap: wrap; padding: 17px; }
+  .certification-tag { margin-left: 0; }
+}
