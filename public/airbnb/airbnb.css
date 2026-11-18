@@ -962,3 +962,83 @@ body {
 @media (max-width: 760px) {
   .certification-link-action { margin-left: 0; }
 }
+
+
+/* PlanIt secondary flagship card on the Airbnb-focused portfolio home */
+.planit-home-panel {
+  margin-top: 18px;
+}
+.planit-home-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 47%,rgba(217,120,114,.16),transparent 46%),linear-gradient(145deg,#F5E6E2,#FFFDFC 72%);
+}
+.planit-home-art::before {
+  background-image: linear-gradient(rgba(92,62,56,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(92,62,56,.05) 1px,transparent 1px);
+}
+.planit-home-orbit {
+  position:absolute;
+  width:72%;
+  aspect-ratio:1;
+  border:1px solid rgba(190,99,94,.22);
+  border-radius:50%;
+  transform:rotate(-17deg);
+}
+.planit-home-orbit.orbit-small {
+  width:53%;
+  border-color:rgba(190,99,94,.15);
+  transform:rotate(22deg);
+}
+.planit-home-art-card {
+  position:relative;
+  z-index:2;
+  width:min(255px,72%);
+  padding:23px;
+  border:1px solid rgba(190,99,94,.27);
+  background:rgba(255,255,255,.95);
+  box-shadow:12px 16px 0 rgba(126,75,68,.08);
+  text-align:center;
+  transform:rotate(-3deg);
+}
+.planit-home-art-card img {
+  display:block;
+  width:100%;
+  height:100px;
+  object-fit:contain;
+}
+.planit-home-art-card span {
+  display:block;
+  margin-top:11px;
+  color:#8D7770;
+  font:7px var(--mono);
+  letter-spacing:.11em;
+}
+.planit-home-art-foot {
+  position:absolute;
+  bottom:20px;
+  left:20px;
+  z-index:2;
+  color:#8D7770;
+  font:7px var(--mono);
+  letter-spacing:.1em;
+}
+.planit-home-actions {
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px 17px;
+  margin-top:23px;
+}
+.planit-home-actions .button { min-height:43px; gap:15px; }
+.planit-home-prototype-link {
+  color:#A95655;
+  font-size:10px;
+  font-weight:700;
+}
+.planit-home-prototype-link:hover { color:#793F40; }
+@media (max-width:760px) {
+  .planit-home-panel { margin-top:14px; }
+  .planit-home-art { min-height:300px; }
+  .planit-home-actions { align-items:flex-start; flex-direction:column; }
+}
