@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FBF8F6" />
+    <meta name="description" content="PortfolioPilot is an independent product case study exploring a creator-controlled workflow for keeping photography and video portfolios current." />
+    <meta property="og:title" content="PortfolioPilot — Product Case Study | Sana Choughule" />
+    <meta property="og:description" content="Turn new creative work into a review-ready portfolio entry, without taking editorial control away from the creator." />
+    <meta property="og:type" content="website" />
+    <link rel="canonical" href="https://sana-choughule-portfolio.vercel.app/airbnb/portfoliopilot/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../airbnb.css" />
+    <link rel="stylesheet" href="./portfoliopilot.css" />
+    <title>PortfolioPilot — Product Case Study | Sana Choughule</title>
+  </head>
+  <body class="case-study-page portfoliopilot-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="../" aria-label="Sana Choughule portfolio home">Sana Choughule<span>.</span></a>
+        <nav class="desktop-nav" aria-label="Case study navigation">
+          <a href="#challenge">Challenge</a>
+          <a href="#workflow">Workflow</a>
+          <a href="#decisions">Decisions</a>
+          <a href="#mvp">MVP scope</a>
+        </nav>
+        <div class="header-actions">
+          <a class="header-link" href="../">Portfolio home <span aria-hidden="true">↗</span></a>
+          <a class="header-cta" href="#prototype">Explore prototype <span aria-hidden="true">↗</span></a>
+          <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
+        </div>
+      </div>
+      <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden>
+        <a href="#challenge">Challenge</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#decisions">Decisions</a>
+        <a href="#mvp">MVP scope</a>
+        <a href="#prototype">Prototype</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="pp-hero section-shell">
+        <a class="pp-back" href="../"><span aria-hidden="true">←</span> BACK TO PORTFOLIO</a>
+        <div class="pp-hero-grid">
+          <div class="pp-hero-copy">
+            <div class="eyebrow"><span class="eyebrow-dot"></span> THIRD FLAGSHIP CASE STUDY · CREATOR TOOLS</div>
+            <h1>Portfolio<em>Pilot</em><span class="pp-title-dot">.</span></h1>
+            <p class="pp-hero-lede">New work should move your portfolio forward—not add another admin task to your day.</p>
+            <p class="pp-hero-summary">An independent product concept for photographers and videographers: turn a new image or video into a structured, review-ready portfolio entry while keeping the creator in control of the final edit and publish decision.</p>
+            <div class="pp-tags">
+              <span>PRODUCT DISCOVERY</span><span>PROBLEM FRAMING</span><span>MVP PRIORITISATION</span><span>AI-ASSISTED WORKFLOW</span>
+            </div>
+            <div class="pp-hero-actions">
+              <a class="button button-primary" href="/portfolio-agent.html" target="_blank" rel="noreferrer noopener">Open interactive prototype <span aria-hidden="true">↗</span></a>
+              <a class="button button-quiet" href="#workflow">Explore the workflow <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <div class="pp-hero-visual" aria-label="Illustrative PortfolioPilot studio dashboard concept">
+            <div class="pp-window">
+              <div class="pp-window-bar">
+                <div class="pp-window-dots"><i></i><i></i><i></i></div>
+                <span>PORTFOLIOPILOT / CREATOR STUDIO</span>
+                <b>CONCEPT UI</b>
+              </div>
+              <div class="pp-dashboard">
+                <aside class="pp-sidebar">
+                  <div class="pp-mini-brand"><span>PP</span><b>Studio</b></div>
+                  <div class="pp-side-label">WORKSPACE</div>
+                  <div class="pp-side-item active"><i>⌂</i> Overview</div>
+                  <div class="pp-side-item"><i>▧</i> Portfolio</div>
+                  <div class="pp-side-item"><i>◫</i> Categories</div>
+                  <div class="pp-side-item"><i>◷</i> AI Activity</div>
+                  <div class="pp-side-item"><i>▤</i> Website</div>
+                  <div class="pp-side-item"><i>⚙</i> Settings</div>
+                  <div class="pp-sidebar-foot"><span>AV</span><div><b>Alex Vance</b><small>CREATOR WORKSPACE</small></div></div>
+                </aside>
+                <div class="pp-dash-main">
+                  <div class="pp-dash-top"><span>STUDIO CMS / OVERVIEW</span><span>DEMO WORKSPACE</span></div>
+                  <h2>Good morning, Alex<span>.</span></h2>
+                  <p class="pp-dash-sub">Your creative library, one considered workflow.</p>
+                  <div class="pp-stat-row">
+                    <div><small>PORTFOLIO WORKS</small><b>06</b><span>Sample items</span></div>
+                    <div><small>CATEGORIES</small><b>04</b><span>Creator-defined</span></div>
+                    <div class="pp-stat-review"><small>NEEDS REVIEW</small><b>01</b><span>Awaiting approval</span></div>
+                  </div>
+                  <div class="pp-dash-lower">
+                    <div class="pp-review-card">
+                      <div class="pp-card-heading"><b>Creator review queue</b><span>01 PENDING</span></div>
+                      <div class="pp-review-item">
+                        <div class="pp-review-thumb"></div>
+                        <div><b>After the Last Train</b><small>DOCUMENTARY & STREET</small><span>Title · tags · category ready to review</span></div>
+                      </div>
+                      <div class="pp-review-bottom"><span>Human approval required</span><b>Review item ↗</b></div>
+                    </div>
+                    <div class="pp-next-card">
+                      <span class="pp-card-eyebrow">YOUR NEXT STEP</span>
+                      <b>Keep the story yours.</b>
+                      <p>Refine the suggestions, choose where the work belongs, then decide what goes live.</p>
+                      <div class="pp-next-pill">EDIT → APPROVE → PUBLISH</div>
+                    </div>
+                  </div>
+                  <div class="pp-demo-foot">ILLUSTRATIVE DASHBOARD · SAMPLE CONTENT · NOT A LIVE SERVICE</div>
+                </div>
+              </div>
+            </div>
+            <div class="pp-visual-caption"><span>01 / THE CREATOR WORKSPACE</span><span>CONCEPT PREVIEW</span></div>
+          </div>
+        </div>
+
+        <div class="pp-facts">
+          <div><span>PRODUCT STAGE</span><b>Independent concept + browser prototype</b></div>
+          <div><span>PRIMARY USER</span><b>Independent photographers & videographers</b></div>
+          <div><span>CORE JOB</span><b>From new media to published portfolio entry</b></div>
+          <div><span>PRODUCT PRINCIPLE</span><b>Automation assists. Creators decide.</b></div>
+        </div>
+      </section>
+
+      <section class="pp-section pp-challenge" id="challenge">
+        <div class="section-shell">
+          <div class="pp-section-heading">
+            <div><div class="pp-kicker"><span></span> 01 / THE CHALLENGE</div><h2>The portfolio isn't the hard part.<br /><em>Keeping it current is.</em></h2></div>
+            <p>Sharing a new project on a social platform can be quick. Updating a professional website is a separate sequence of small jobs—and that sequence repeats every time fresh work is ready.</p>
+          </div>
+          <div class="pp-friction-grid">
+            <article><span>01</span><h3>Find & prepare</h3><p>Locate the original media, check the right file, create a thumbnail and make sure the asset is ready for the website.</p></article>
+            <article><span>02</span><h3>Describe & organise</h3><p>Write a title and description, add tags, choose a category and decide how the project should sit within the existing grid.</p></article>
+            <article><span>03</span><h3>Publish & verify</h3><p>Check the desktop and mobile presentation, publish the update and confirm the portfolio reflects the intended work.</p></article>
+          </div>
+          <div class="pp-insight">
+            <div class="pp-insight-mark">✳</div>
+            <div><span>THE PRODUCT INSIGHT</span><h3>The gap is between producing creative work and maintaining the professional portfolio that represents it.</h3><p>PortfolioPilot is designed around that hand-off—not around automating social posts or replacing the creator’s editorial judgement.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pp-section pp-stakeholders">
+        <div class="section-shell pp-stakeholder-grid">
+          <div>
+            <div class="pp-kicker"><span></span> 02 / STAKEHOLDER CONTEXT</div>
+            <h2>One workflow.<br /><em>Three perspectives.</em></h2>
+            <p class="pp-body">The concept starts with the independent creator who manages both the creative work and the website. It also considers the people who help manage portfolios and the clients who rely on them to assess work.</p>
+            <p class="pp-caveat">This is a product framing of stakeholder needs and assumptions to validate—not a claim of representative user research or a measured study.</p>
+          </div>
+          <div class="pp-stakeholder-list">
+            <article><span>PRIMARY STAKEHOLDER</span><h3>Independent creators</h3><p>Photographers and videographers who need their professional presence to stay current without losing time to repetitive website administration.</p></article>
+            <article><span>SECONDARY STAKEHOLDER</span><h3>Creative teams & agencies</h3><p>People coordinating more than one body of work or helping maintain multiple professional portfolios.</p></article>
+            <article><span>END VISITOR</span><h3>Prospective clients</h3><p>People who need a clear, current and easy-to-navigate view of a creator’s work before starting a conversation.</p></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pp-section pp-workflow" id="workflow">
+        <div class="section-shell">
+          <div class="pp-section-heading">
+            <div><div class="pp-kicker"><span></span> 03 / THE PRODUCT WORKFLOW</div><h2>From a fresh asset<br /><em>to a considered showcase.</em></h2></div>
+            <p>One guided flow connects media intake, visual preparation, metadata suggestions, creator review and portfolio publishing. Each stage has a clear job and a visible hand-off.</p>
+          </div>
+          <div class="pp-flow">
+            <article><span>01</span><div class="pp-flow-icon">↥</div><h3>Bring work in</h3><p>Upload an image or video directly. An Instagram URL is an optional path only when retrieval is authorised and supported.</p><small>MEDIA INTAKE</small></article>
+            <div class="pp-flow-arrow">→</div>
+            <article><span>02</span><div class="pp-flow-icon">⌕</div><h3>Validate & prepare</h3><p>Check format and file integrity, then prepare a representative visual asset such as a thumbnail or key frame.</p><small>MEDIA PROCESSING</small></article>
+            <div class="pp-flow-arrow">→</div>
+            <article><span>03</span><div class="pp-flow-icon">✳</div><h3>Suggest the story</h3><p>Prepare draft titles, descriptions, tags and category suggestions from the creative work and its context.</p><small>AI-ASSISTED CURATION</small></article>
+            <div class="pp-flow-arrow">→</div>
+            <article><span>04</span><div class="pp-flow-icon">▤</div><h3>Match the collection</h3><p>Recommend a place in the creator’s own category system without forcing a generic taxonomy.</p><small>CREATOR TAXONOMY</small></article>
+            <div class="pp-flow-arrow">→</div>
+            <article><span>05</span><div class="pp-flow-icon">✓</div><h3>Review & decide</h3><p>Edit every suggestion, approve the entry or save it as a draft. The creator owns the final decision.</p><small>HUMAN APPROVAL</small></article>
+            <div class="pp-flow-arrow">→</div>
+            <article><span>06</span><div class="pp-flow-icon">↗</div><h3>Publish & manage</h3><p>Publish approved portfolio content, revisit it later and manage what visitors can see.</p><small>PORTFOLIO MANAGEMENT</small></article>
+          </div>
+          <div class="pp-workflow-note"><b>Primary path:</b> direct media upload. <b>Conditional path:</b> social URL import only when platform access and permissions allow it; upload remains the dependable fallback.</div>
+        </div>
+      </section>
+
+      <section class="pp-section pp-decisions" id="decisions">
+        <div class="section-shell">
+          <div class="pp-section-heading">
+            <div><div class="pp-kicker"><span></span> 04 / KEY PRODUCT DECISIONS</div><h2>Useful automation.<br /><em>Uncompromised authorship.</em></h2></div>
+            <p>The product should remove repetitive setup work without making creative choices on the user’s behalf or unexpectedly changing the portfolio’s visual identity.</p>
+          </div>
+          <div class="pp-decision-grid">
+            <article><span>DECISION 01</span><h3>Direct upload is the reliable default</h3><p>Do not make the core workflow depend on social-platform access. Treat an Instagram URL as a convenience when retrieval is explicitly supported and authorised.</p><div class="pp-decision-outcome">RELIABILITY BEFORE CONVENIENCE</div></article>
+            <article><span>DECISION 02</span><h3>AI recommends. The creator edits.</h3><p>Titles, descriptions, tags and categories are starting suggestions—not final creative copy or silently published decisions.</p><div class="pp-decision-outcome">ASSIST, DON'T OVERRIDE</div></article>
+            <article><span>DECISION 03</span><h3>Use the creator’s own taxonomy</h3><p>Categories should reflect the creator’s discipline and way of presenting work, rather than forcing a fixed universal set.</p><div class="pp-decision-outcome">FLEXIBLE CLASSIFICATION</div></article>
+            <article><span>DECISION 04</span><h3>Separate content from presentation</h3><p>Adding a new portfolio item should not unexpectedly redesign the website, reorder everything or change an established visual identity.</p><div class="pp-decision-outcome">PRESERVE THE EXISTING BRAND</div></article>
+            <article><span>DECISION 05</span><h3>Keep approval in the publishing path</h3><p>Creators can review, edit, publish or save as draft. Automatic publishing is not the default for the first release.</p><div class="pp-decision-outcome">HUMAN REVIEW BEFORE PUBLISH</div></article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pp-section pp-mvp" id="mvp">
+        <div class="section-shell">
+          <div class="pp-section-heading">
+            <div><div class="pp-kicker"><span></span> 05 / MVP FOCUS & PRIORITISATION</div><h2>Start with the smallest<br /><em>complete publishing loop.</em></h2></div>
+            <p>The first release is valuable only if a creator can take one new asset all the way through to a controlled portfolio update. Advanced management can follow after that workflow is validated.</p>
+          </div>
+          <div class="pp-mvp-grid">
+            <div class="pp-mvp-core">
+              <div class="pp-mvp-label">MVP / CORE WORKFLOW</div>
+              <h3>Everything needed to finish one update.</h3>
+              <ul>
+                <li><span>01</span>Create a portfolio workspace and configure creator-defined categories.</li>
+                <li><span>02</span>Upload an image or video and validate the file.</li>
+                <li><span>03</span>Prepare a thumbnail or representative frame and draft metadata suggestions.</li>
+                <li><span>04</span>Review, edit, approve or save the portfolio item as a draft.</li>
+                <li><span>05</span>Publish approved work and manage existing portfolio items.</li>
+              </ul>
+            </div>
+            <div class="pp-mvp-later">
+              <div class="pp-mvp-label">LATER / AFTER CORE VALIDATION</div>
+              <h3>Expand only when the basics work.</h3>
+              <ul>
+                <li>Multi-user agency workspaces and role-based collaboration.</li>
+                <li>Managing multiple creator portfolios from one account.</li>
+                <li>Custom domains and deeper website integrations.</li>
+                <li>Portfolio analytics and richer performance insights.</li>
+                <li>Broader social publishing or cross-platform distribution.</li>
+              </ul>
+              <p>These are deliberately outside the first release so the core creator workflow can be tested without adding unnecessary surface area.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pp-section pp-engineering">
+        <div class="section-shell">
+          <div class="pp-section-heading">
+            <div><div class="pp-kicker"><span></span> 06 / PRODUCT + ENGINEERING HAND-OFF</div><h2>Think through the<br /><em>work behind the interface.</em></h2></div>
+            <p>The workflow has product decisions and engineering dependencies at every step. This is a conceptual service view for discussion—not a built or connected backend architecture.</p>
+          </div>
+          <div class="pp-architecture">
+            <div class="pp-architecture-row">
+              <article><small>01 / EXPERIENCE</small><b>Creator workspace</b><span>Upload · taxonomy · review</span></article>
+              <i>→</i>
+              <article><small>02 / INTAKE</small><b>Media validation</b><span>Type · size · integrity</span></article>
+              <i>→</i>
+              <article><small>03 / PROCESSING</small><b>Asset preparation</b><span>Thumbnail · key frame</span></article>
+              <i>→</i>
+              <article><small>04 / ASSISTANCE</small><b>Metadata suggestions</b><span>Title · tags · category</span></article>
+              <i>→</i>
+              <article><small>05 / GOVERNANCE</small><b>Creator approval</b><span>Edit · approve · draft</span></article>
+              <i>→</i>
+              <article><small>06 / DELIVERY</small><b>Publishing adapter</b><span>Website / CMS integration</span></article>
+            </div>
+            <div class="pp-engineering-bottom">
+              <div><span>PRODUCT QUESTIONS</span><p>What is the minimum information a creator must provide? Which suggestions save time? When must a person approve? What happens when the workflow cannot complete?</p></div>
+              <div><span>ENGINEERING QUESTIONS</span><p>Where are source files stored? How are large media files processed? Which website stacks can be supported? How do we handle retries, duplicate publishing and access permissions?</p></div>
+            </div>
+          </div>
+          <div class="pp-risk-strip"><b>Dependencies to validate</b><span>Platform permissions · Media limits · Processing time · Suggestion quality · Storage and retention · CMS integration coverage · Failure and recovery states</span></div>
+        </div>
+      </section>
+
+      <section class="pp-section pp-success">
+        <div class="section-shell pp-success-grid">
+          <div>
+            <div class="pp-kicker"><span></span> 07 / SUCCESS SIGNALS & GUARDRAILS</div>
+            <h2>Measure the effort removed.<br /><em>Protect the control retained.</em></h2>
+            <p class="pp-body">The first validation should show whether the workflow removes administrative work while keeping the quality and ownership of the public portfolio intact.</p>
+          </div>
+          <div class="pp-metrics-list">
+            <div><b>Upload-to-publish time</b><span>How long does one complete portfolio update take?</span></div>
+            <div><b>Manual steps per item</b><span>Which repeated actions are actually removed?</span></div>
+            <div><b>Suggestion correction rate</b><span>How often do creators need to rewrite metadata or change categories?</span></div>
+            <div><b>Processing success & recovery</b><span>Can the workflow handle unsupported or incomplete media clearly?</span></div>
+            <div><b>Portfolio freshness</b><span>How long does approved work take to appear on the public site?</span></div>
+            <div><b>Publishing guardrails</b><span>Are duplicate, accidental or unapproved publishes prevented?</span></div>
+          </div>
+          <p class="pp-metric-note">These are proposed measures to validate and baselines to establish—not achieved results or proven business impact.</p>
+        </div>
+      </section>
+
+      <section class="pp-section pp-prototype" id="prototype">
+        <div class="section-shell">
+          <div class="pp-prototype-card">
+            <div class="pp-prototype-copy">
+              <div class="pp-kicker"><span></span> 08 / EXPLORE THE CONCEPT</div>
+              <h2>Step inside the<br /><em>creator workspace.</em></h2>
+              <p>Explore the standalone browser prototype: review a sample library, manage creator-defined categories, add media, move through the simulated curation flow, adjust a portfolio identity and preview the visitor-facing work grid.</p>
+              <a class="button button-primary" href="/portfolio-agent.html" target="_blank" rel="noreferrer noopener">Open PortfolioPilot prototype <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="pp-prototype-contents">
+              <div><span>01</span><b>Studio overview</b><small>Sample library, categories and review queue</small></div>
+              <div><span>02</span><b>Media intake</b><small>Direct upload UI and optional URL format check</small></div>
+              <div><span>03</span><b>Creator review</b><small>Edit title, description, tags and category</small></div>
+              <div><span>04</span><b>Website preview</b><small>Portfolio identity and public work presentation</small></div>
+            </div>
+          </div>
+          <div class="pp-demo-boundary">
+            <div class="pp-boundary-mark">i</div>
+            <div><b>Prototype boundary — please read</b><p>This is a browser-based concept demo using sample content and local interactions. The processing timeline and metadata suggestions are simulated placeholders: there is no live Gemini call, background worker, cloud media upload, Instagram media retrieval or remote website publishing. Instagram URL entry checks its format only. Uploaded assets remain temporary in the browser session, while workspace edits are stored locally in the browser. The demo is not a production-connected product.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pp-contact">
+        <div class="section-shell pp-contact-inner">
+          <div class="pp-kicker"><span></span> CONTINUE THE CONVERSATION</div>
+          <h2>Good automation leaves<br /><em>room for human taste.</em></h2>
+          <p>PortfolioPilot explores how thoughtful product boundaries can make a creative workflow easier without taking authorship away from the person behind the work.</p>
+          <div class="pp-contact-actions">
+            <a class="button button-primary" href="/portfolio-agent.html" target="_blank" rel="noreferrer noopener">Explore the prototype <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="mailto:choughulesana@gmail.com?subject=PortfolioPilot%20%E2%80%94%20Product%20Walkthrough">Discuss the product thinking <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="../">Back to portfolio <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-top">
+        <a class="wordmark" href="../">Sana Choughule<span>.</span></a>
+        <div class="footer-links">
+          <a href="https://linkedin.com/in/sana-choughule" target="_blank" rel="noreferrer noopener">LinkedIn ↗</a>
+          <a href="https://github.com/SanaChoughule" target="_blank" rel="noreferrer noopener">GitHub ↗</a>
+          <a href="../">Portfolio home ↗</a>
+        </div>
+      </div>
+      <div class="section-shell footer-bottom">
+        <span>© <span id="year"></span> Sana Choughule</span>
+        <span>PRODUCT THINKING · ENGINEERING · THOUGHTFUL EXECUTION</span>
+        <a href="#main">BACK TO TOP ↑</a>
+      </div>
+    </footer>
+    <script type="module" src="../airbnb.js"></script>
+  </body>
+</html>
